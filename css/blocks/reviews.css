@@ -18,63 +18,112 @@
 .reviews--img-1 {
   background: url("./../img/bg/reviews-1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
 }
 
 .reviews--img-2 {
   background: url("./../img/bg/reviews-2.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: -100px;
 }
 
 .reviews--img-3 {
   background: url("./../img/bg/reviews-3.jpg");
   background-repeat: no-repeat;
-  background-size: 100%  100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
 }
 
 .reviews--img-4 {
-  background: url("./../img/bg/reviews-4.jpg");
+  background: url("./../img/bg/reviews-8.jpg");
   background-repeat: no-repeat;
-  background-size: 100%  100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
 }
 
 .reviews--img-5 {
-  background: url("./../img/bg/reviews-5.jpg");
+  background: url("./../img/bg/reviews-4.jpg");
   background-repeat: no-repeat;
-  background-size: 100%  100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
 }
 
 .reviews--img-6 {
-  background: url("./../img/bg/reviews-6.jpg");
+  background: url("./../img/bg/reviews-5.jpg");
   background-repeat: no-repeat;
-  background-size: 100%  100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
 }
 
 .reviews--img-7 {
-  background: url("./../img/bg/reviews-7.jpg");
+  background: url("./../img/bg/reviews-6.jpg");
   background-repeat: no-repeat;
-  background-size: 100%  100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
 }
 
 .reviews--img-8 {
-  background: url("./../img/bg/reviews-8.jpg");
+  background: url("./../img/bg/reviews-7.jpg");
   background-repeat: no-repeat;
-  background-size: 100%  100%;
+  background-size: cover;
   height: 50vh;
-  width: 25vh;
+  width: 25vw;
+  background-position: center;
+}
+
+.reviews__title {
+  color: #ffffff;
+  font-family: Gagalin;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.11px;
+}
+
+.reviews__desc {
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.reviews__wrapper {
+  padding-left: 20px;
+  padding-top: 50px;
+  padding-right: 33px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.7);
+  opacity: 0;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.reviews__wrapper:hover {
+  opacity: 1;
+}
+
+.button--reviews {
+  background-color: #2f3234;
+  transition: 1s;
+}
+
+.button--reviews:hover {
+  background-color: #1f2122;
 }
