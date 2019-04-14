@@ -22,6 +22,10 @@ a
     width: 100%
     height: 100vh
     position: relative
+    @media screen and (max-width: 768px)
+        background-image:url(./../img/bg/welcome-bg.jpg)
+        background-repeat: no-repeat
+        background-size: cover
 
 .two-block 
     background-image:url(./../img/bg/two-bg.jpg) 
@@ -30,6 +34,8 @@ a
     width: 100%
     height: 100vh
     display: flex
+    @media screen and (max-width: 768px)
+        background-image:url(./../img/bg/best-bg-768.jpg)
     @media screen and (max-width: 480px)
         background-image:url(./../img/bg/best-bg-phone.jpg)
         
@@ -91,6 +97,10 @@ a
     padding: 
         right: 10px
         left: 10px
+    @media screen and (max-width: 768px)
+        padding-left: 20px
+        padding-right: 20px
+           
     
     
 .button 
@@ -107,9 +117,79 @@ a
     text-transform: uppercase
     text-align: center
     cursor: pointer
+    transition: 1s
+    &:hover
+        background-color: #c1401e
 
 .flex-centr
     display: flex
     align-items: center
     @media screen and (max-width: 480px)
         align-items: flex-start 
+
+
+.points
+    right: 5vw
+    top: 10vh
+    z-index: 10
+    position: fixed
+    @media screen and (max-width: 768px)
+        display: none
+        overflow: hidden
+    
+.points__list
+    list-style: none
+    padding: 0
+    margin: 0
+    height: 200px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.points__item
+    position: relative
+    height: 1rem
+    width: 1rem
+    z-index: 10
+    cursor: pointer
+.points__link
+    width: 6px
+    height: 6px
+    background-color:#fff
+    position: absolute
+    border-radius: 50%
+    z-index: 10
+    left: 50%
+    top: 50%
+    display: block
+    transform: translate(-50%,-50%)
+    
+    &:before
+        content: ""
+        width: 16px
+        height: 16px
+        border: 1px solid #ffffff
+        position: absolute
+        border-radius: 50%
+        z-index: 10
+        left: 50%
+        top: 50%
+        display: block
+        transform: translate(-50%,-50%)
+        opacity: 0
+        transition: 1s
+
+    
+            
+.points__link:hover:before
+    content: ""
+    opacity: 1      
+
+   
+        
+   
+    
+    
+
+.main
+    position: relative

@@ -4,6 +4,12 @@
     height: 100vh
     background: rgba(49, 52, 54, 0.9)
     right: 0
+    transition: 1s
+    @media screen and (max-width: 768px)
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
    
 
 .team__dropdown
@@ -13,6 +19,11 @@
     padding: 0
     margin: 0
     list-style: none
+    @media screen and (max-width: 768px)
+        display: flex
+        flex-direction: column
+        margin-left: 0
+        align-items: center
 
 .team__link 
     color: #ffffff
@@ -29,6 +40,13 @@
         position: absolute
         left: -20px
         top: 7px
+    @media screen and (max-width: 768px)
+        font-size: 25px
+        line-height: 29.13px
+    &::after
+        left: -19px
+        top: 13px
+
 
 .team__title
     color: #f9b43b
@@ -38,11 +56,23 @@
     line-height: 64.04px
 
 .team__wrapper
- margin-left: 100px
- margin-top: 110px
+    margin-left: 80px
+    @media screen and (max-width: 768px)
+        display: flex
+        flex-direction: column
+        margin-left: 0
+        align-items: center
+        
+        
+    
+
+    
 
 .team__item
     margin-bottom: 30px
+    cursor: pointer
+    @media screen and (max-width: 768px)
+        text-align: center
 
 .team__item-avatar
     width: 100px
@@ -53,6 +83,10 @@
     display: block
     height: 0
     overflow: hidden
+    @media screen and (max-width: 768px)
+        display: flex
+        flex-direction: column
+        align-items: center
 
 .team__item-img
     display: inline-block
@@ -61,6 +95,9 @@
     vertical-align: top
     margin-top: 10px
     margin-right: 20px
+    @media screen and (max-width: 768px)
+       margin-right: 0px
+       margin-bottom: 20px
 
 
 
@@ -71,6 +108,9 @@
     color: #ffffff
     font-family: "Ubuntu" ,sans-serif
     line-height: 24.01px
+    @media screen and (max-width: 768px)
+        text-align: center
+        max-width: 330px
 
 .team__item-title
     font-weight: 700

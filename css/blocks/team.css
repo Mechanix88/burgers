@@ -4,12 +4,31 @@
   height: 100vh;
   background: rgba(49, 52, 54, 0.9);
   right: 0;
+  transition: 1s;
+}
+
+@media screen and (max-width: 768px) {
+  .team {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .team__list {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
 }
 
 .team__link {
@@ -31,6 +50,18 @@
   top: 7px;
 }
 
+@media screen and (max-width: 768px) {
+  .team__link {
+    font-size: 25px;
+    line-height: 29.13px;
+  }
+}
+
+.team__link::after {
+  left: -19px;
+  top: 13px;
+}
+
 .team__title {
   color: #f9b43b;
   font-family: Gagalin;
@@ -40,12 +71,27 @@
 }
 
 .team__wrapper {
-  margin-left: 100px;
-  margin-top: 110px;
+  margin-left: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .team__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+  }
 }
 
 .team__item {
   margin-bottom: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .team__item {
+    text-align: center;
+  }
 }
 
 .team__item-avatar {
@@ -60,6 +106,14 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 768px) {
+  .team__dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .team__item-img {
   display: inline-block;
   width: 100px;
@@ -69,6 +123,13 @@
   margin-right: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .team__item-img {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
 .team__item-desc {
   display: inline-block;
   text-align: left;
@@ -76,6 +137,13 @@
   color: #ffffff;
   font-family: "Ubuntu" ,sans-serif;
   line-height: 24.01px;
+}
+
+@media screen and (max-width: 768px) {
+  .team__item-desc {
+    text-align: center;
+    max-width: 330px;
+  }
 }
 
 .team__item-title {

@@ -53,6 +53,7 @@
   width: 23px;
   display: block;
   opacity: 0.3;
+  transition: 1s;
 }
 
 .social__link--facebook {
@@ -64,6 +65,7 @@
   width: 20px;
   display: block;
   opacity: 0.3;
+  transition: 1s;
 }
 
 .social__link--insta {
@@ -75,6 +77,7 @@
   width: 20px;
   display: block;
   opacity: 0.3;
+  transition: 1s;
 }
 
 .social__link--twitter {
@@ -86,6 +89,7 @@
   width: 20px;
   display: block;
   opacity: 0.3;
+  transition: 1s;
 }
 
 .social__link:hover {

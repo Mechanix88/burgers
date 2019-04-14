@@ -13,6 +13,9 @@
     flex: 25%
     width: 100%
     filter: grayscale(100%)
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
    
 
 .reviews--img-1
@@ -22,6 +25,10 @@
     height: 50vh 
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
     
 
 
@@ -32,6 +39,12 @@
     height: 50vh
     width: 25vw
     background-position: -100px
+    transition: 1s
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
+        background-position: 0px
     
 
 .reviews--img-3
@@ -41,6 +54,10 @@
     height: 50vh
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
     
 
 .reviews--img-4
@@ -50,6 +67,10 @@
     height: 50vh
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
    
 
 .reviews--img-5
@@ -59,6 +80,10 @@
     height: 50vh
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
     
 
 .reviews--img-6
@@ -68,6 +93,10 @@
     height: 50vh
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
     
 
 .reviews--img-7
@@ -77,6 +106,10 @@
     height: 50vh
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
     
 
 .reviews--img-8
@@ -86,6 +119,10 @@
     height: 50vh
     width: 25vw
     background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25vh
     
 
 .reviews__title
@@ -94,13 +131,25 @@
     font-size: 14px
     font-weight: 400
     line-height: 28.11px
+    @media screen and (max-width: 768px)
+        margin-top: 10
+        margin-bottom: 0px
 
+    @media screen and (max-width: 480px)
+        margin-bottom: 20px
+        text-align: center
+        font-size: 24px
+       
 .reviews__desc
     color: #ffffff
     font-family: Ubuntu
     font-size: 14px
     font-weight: 300
     line-height: 24px
+    @media screen and (max-width: 480px)
+        display: none
+        overflow: hidden
+
 
 .reviews__wrapper
     padding-left: 20px
@@ -114,10 +163,18 @@
     cursor: pointer
     &:hover
         opacity: 1
+    @media screen and (max-width: 768px)
+        padding-top: 10px
+        padding-left: 50px
+        padding-right: 50px
+        text-align: center
 
 .button--reviews
     background-color: #2f3234
     transition: 1s
+    @media screen and (max-width: 480px)
+        margin: 0 auto
+        display: block
     &:hover 
         background-color: #1f2122
 
