@@ -21,6 +21,76 @@ a {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+
+.two-block {
+  background-image: url(./../img/bg/two-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+@media screen and (max-width: 480px) {
+  .two-block {
+    background-image: url(./../img/bg/best-bg-phone.jpg);
+  }
+}
+
+.six-block {
+  height: 100vh;
+  width: 100%;
+}
+
+.three-block {
+  background-color: #f9b43b;
+  background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.four-block {
+  background-image: url(./../img/bg/four-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.eight-block {
+  background-image: url(./../img/bg/six-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.ten-block {
+  background-image: url(./../img/bg/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.five-block {
+  background-image: url(./../img/bg/menu-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
 }
 
 .conteiner {
@@ -44,4 +114,15 @@ a {
   text-transform: uppercase;
   text-align: center;
   cursor: pointer;
+}
+
+.flex-centr {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .flex-centr {
+    align-items: flex-start;
+  }
 }

@@ -1,0 +1,48 @@
+.welcome {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 55vh;
+}
+
+.welcome__main-title {
+  color: #f9b43b;
+  font-family: Gagalin;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 85px;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.welcome__subtitle {
+  color: #ffffff;
+  font-family: Lifehack;
+  font-size: 65px;
+  font-weight: 500;
+  letter-spacing: -1.63px;
+  line-height: 85px;
+  margin: 0px;
+}
+
+.welcome__img {
+  display: flex;
+  align-items: center;
+}
+
+.welcome__titles {
+  padding-bottom: 25px;
+}
+
+.first-block__arrow-down {
+  position: absolute;
+  height: 16px;
+  width: 29px;
+  background-image: url("/img/icons/arrow-scroll.svg");
+  bottom: 40px;
+  left: 50%;
+  transform: translate(50%, 50%);
+  cursor: pointer;
+}
