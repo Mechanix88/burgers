@@ -9,7 +9,7 @@
   left: 105%;
   height: 16px;
   width: 29px;
-  background-image: url("/img/icons/arrow-scroll.svg");
+  background-image: url("./../img/icons/arrow-scroll.svg");
   transform: rotate(-90deg);
   cursor: pointer;
 }
@@ -19,7 +19,7 @@
   left: -5%;
   height: 16px;
   width: 29px;
-  background-image: url("/img/icons/arrow-scroll.svg");
+  background-image: url("./../img/icons/arrow-scroll.svg");
   transform: rotate(90deg);
   cursor: pointer;
 }
@@ -41,7 +41,7 @@
 
 .burger__kkal {
   height: 60px;
-  background-image: url(/img/icons/kkal.svg);
+  background-image: url(./../img/icons/kkal.svg);
   background-size: cover;
   width: 60px;
   line-height: 72px;
@@ -105,7 +105,7 @@
   left: 0;
   transform: translateY(-50%);
   border-radius: 5px;
-  background-image: url(/img/icons/burger.svg);
+  background-image: url(./../img/icons/burger.svg);
   background-repeat: no-repeat;
   background-position: center 15px;
   display: flex;

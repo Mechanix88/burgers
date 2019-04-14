@@ -142,7 +142,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 
 .delivery-block__checkbox-label:after {
   content: "";
-  background-image: url("/img/icons/checkbox-icon.png");
+  background-image: url("./../img/icons/checkbox-icon.png");
   width: 11px;
   height: 9px;
   position: absolute;

@@ -1,41 +1,41 @@
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/Ubuntu-Medium.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/Ubuntu.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("/fonts/Ubuntu-Light.ttf") format("truetype");
+  src: url("../../fonts/Ubuntu-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("/fonts/Gagalin-Regular.ttf") format("truetype");
+  src: url("../../fonts/Gagalin-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("/fonts/Lifehack-Medium.ttf") format("truetype");
+  src: url("../../fonts/Lifehack-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -394,7 +394,7 @@ a {
 }
 
 .welcome__burger {
-  background: url(/img/bg/burger-bg.png);
+  background: url(./../img/bg/burger-bg.png);
   height: 83%;
   width: 50%;
   background-repeat: no-repeat;
@@ -407,7 +407,7 @@ a {
   .welcome__burger {
     margin-bottom: 40px;
     margin-right: 0px;
-    background: url(/img/bg/welcome-burger-bg.png);
+    background: url(./../img/bg/welcome-burger-bg.png);
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -493,7 +493,7 @@ a {
   position: absolute;
   height: 16px;
   width: 29px;
-  background-image: url("/img/icons/arrow-scroll.svg");
+  background-image: url("./../img/icons/arrow-scroll.svg");
   bottom: 40px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -579,7 +579,7 @@ a {
 }
 
 .best__icon-meat {
-  background-image: url("/img/icons/meat.svg");
+  background-image: url("./../img/icons/meat.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 97px;
@@ -587,7 +587,7 @@ a {
 }
 
 .best__icon-hand {
-  background-image: url("/img/icons/hand.svg");
+  background-image: url("./../img/icons/hand.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 97px;
@@ -595,7 +595,7 @@ a {
 }
 
 .best__icon-natural {
-  background-image: url("/img/icons/natural.svg");
+  background-image: url("./../img/icons/natural.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 97px;
@@ -887,7 +887,7 @@ a {
   left: 105%;
   height: 16px;
   width: 29px;
-  background-image: url("/img/icons/arrow-scroll.svg");
+  background-image: url("./../img/icons/arrow-scroll.svg");
   transform: rotate(-90deg);
   cursor: pointer;
 }
@@ -897,7 +897,7 @@ a {
   left: -5%;
   height: 16px;
   width: 29px;
-  background-image: url("/img/icons/arrow-scroll.svg");
+  background-image: url("./../img/icons/arrow-scroll.svg");
   transform: rotate(90deg);
   cursor: pointer;
 }
@@ -919,7 +919,7 @@ a {
 
 .burger__kkal {
   height: 60px;
-  background-image: url(/img/icons/kkal.svg);
+  background-image: url(./../img/icons/kkal.svg);
   background-size: cover;
   width: 60px;
   line-height: 72px;
@@ -983,7 +983,7 @@ a {
   left: 0;
   transform: translateY(-50%);
   border-radius: 5px;
-  background-image: url(/img/icons/burger.svg);
+  background-image: url(./../img/icons/burger.svg);
   background-repeat: no-repeat;
   background-position: center 15px;
   display: flex;
@@ -1359,7 +1359,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 
 .delivery-block__checkbox-label:after {
   content: "";
-  background-image: url("/img/icons/checkbox-icon.png");
+  background-image: url("./../img/icons/checkbox-icon.png");
   width: 11px;
   height: 9px;
   position: absolute;
@@ -1370,7 +1370,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 
 .footer {
   position: absolute;
-  background-image: url("/img/bg/footer-bg.jpg");
+  background-image: url("./../img/bg/footer-bg.jpg");
   bottom: 0;
   width: 100%;
   min-height: 60px;
@@ -1415,7 +1415,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .social__link--vk {
-  background-image: url("/img/icons/vk.svg");
+  background-image: url("./../img/icons/vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1427,7 +1427,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .social__link--facebook {
-  background-image: url("/img/icons/fb.svg");
+  background-image: url("./../img/icons/fb.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1439,7 +1439,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .social__link--insta {
-  background-image: url("/img/icons/inst.svg");
+  background-image: url("./../img/icons/inst.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1451,7 +1451,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .social__link--twitter {
-  background-image: url("/img/icons/twitter.svg");
+  background-image: url("./../img/icons/twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1477,7 +1477,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 .contacts__link::after {
   content: "";
   position: absolute;
-  background-image: url("/img/icons/phone-icon.png");
+  background-image: url("./../img/icons/phone-icon.png");
   height: 11px;
   width: 12px;
   left: 0;
@@ -1516,7 +1516,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .accordeon__list--bg1 {
-  background-image: url(/img/bg/accordeon-bg1.jpg);
+  background-image: url(./../img/bg/accordeon-bg1.jpg);
   width: 80px;
   height: 100vh;
   background-size: cover;
@@ -1524,7 +1524,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .accordeon__list--bg2 {
-  background-image: url(/img/bg/accordeon-bg2.jpg);
+  background-image: url(./../img/bg/accordeon-bg2.jpg);
   width: 80px;
   height: 100vh;
   background-size: cover;
@@ -1532,7 +1532,7 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
 }
 
 .accordeon__list--bg3 {
-  background-image: url(/img/bg/accordeon-bg3.jpg);
+  background-image: url(./../img/bg/accordeon-bg3.jpg);
   width: 80px;
   height: 100vh;
   background-repeat: no-repeat;

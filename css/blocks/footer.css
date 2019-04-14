@@ -1,6 +1,6 @@
 .footer {
   position: absolute;
-  background-image: url("/img/bg/footer-bg.jpg");
+  background-image: url("./../img/bg/footer-bg.jpg");
   bottom: 0;
   width: 100%;
   min-height: 60px;
@@ -45,7 +45,7 @@
 }
 
 .social__link--vk {
-  background-image: url("/img/icons/vk.svg");
+  background-image: url("./../img/icons/vk.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -57,7 +57,7 @@
 }
 
 .social__link--facebook {
-  background-image: url("/img/icons/fb.svg");
+  background-image: url("./../img/icons/fb.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -69,7 +69,7 @@
 }
 
 .social__link--insta {
-  background-image: url("/img/icons/inst.svg");
+  background-image: url("./../img/icons/inst.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -81,7 +81,7 @@
 }
 
 .social__link--twitter {
-  background-image: url("/img/icons/twitter.svg");
+  background-image: url("./../img/icons/twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -107,7 +107,7 @@
 .contacts__link::after {
   content: "";
   position: absolute;
-  background-image: url("/img/icons/phone-icon.png");
+  background-image: url("./../img/icons/phone-icon.png");
   height: 11px;
   width: 12px;
   left: 0;
