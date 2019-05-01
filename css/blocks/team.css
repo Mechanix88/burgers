@@ -1,18 +1,21 @@
-.team {
+.team__wrapper {
   position: absolute;
   width: 50%;
   height: 100vh;
   background: rgba(49, 52, 54, 0.9);
   right: 0;
   transition: 1s;
+  padding-left: 80px;
 }
 
 @media screen and (max-width: 768px) {
-  .team {
+  .team__wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 0px;
+    flex-direction: column;
   }
 }
 
@@ -57,30 +60,12 @@
   }
 }
 
-.team__link::after {
-  left: -19px;
-  top: 13px;
-}
-
 .team__title {
   color: #f9b43b;
   font-family: Gagalin;
   font-size: 72px;
   font-weight: 400;
   line-height: 64.04px;
-}
-
-.team__wrapper {
-  margin-left: 80px;
-}
-
-@media screen and (max-width: 768px) {
-  .team__wrapper {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0;
-    align-items: center;
-  }
 }
 
 .team__item {

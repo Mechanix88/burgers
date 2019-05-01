@@ -15,24 +15,22 @@ img
 a 
     text-decoration: none
 
-.first-block 
+.welcome
     background-image:url(./../img/bg/first-bg.jpg) 
     background-repeat: no-repeat
     background-size: cover
-    width: 100%
-    height: 100vh
+ 
     position: relative
     @media screen and (max-width: 768px)
         background-image:url(./../img/bg/welcome-bg.jpg)
         background-repeat: no-repeat
         background-size: cover
 
-.two-block 
+.best
     background-image:url(./../img/bg/two-bg.jpg) 
     background-repeat: no-repeat
     background-size: cover
-    width: 100%
-    height: 100vh
+
     display: flex
     @media screen and (max-width: 768px)
         background-image:url(./../img/bg/best-bg-768.jpg)
@@ -40,56 +38,51 @@ a
         background-image:url(./../img/bg/best-bg-phone.jpg)
         
 
-.six-block
-    height: 100vh
-    width: 100%
 
-.three-block
+
+.burger
     background-color: #f9b43b
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%)
-    height: 100vh
-    width: 100%
+ 
     display: flex
     align-items: center
 
-.four-block
+.team
     background-image:url(./../img/bg/four-bg.jpg)
     background-repeat: no-repeat
     background-size: cover
-    width: 100%
-    height: 100vh
+
     display: flex
     position: relative
 
-.eight-block
+.delivery
     background-image:url(./../img/bg/six-bg.jpg)
     background-repeat: no-repeat
     background-size: cover
-    width: 100%
-    height: 100vh
+
     display: flex
 
-.ten-block
+.map
     background-image:url(./../img/bg/map.jpg)
     background-repeat: no-repeat
     background-size: cover
-    width: 100%
-    height: 100vh
+
     display: flex
     position: relative
 
-.five-block
+.accordeon
     background-image:url(./../img/bg/menu-bg.jpg)
     background-repeat: no-repeat
     background-size: cover
     background-position: center
-    width: 100%
-    height: 100vh
+
     display: flex
     position: relative
 
 
-
+.section 
+    height: 100vh
+    width: 100%
 
 .conteiner 
     max-width: 960px
@@ -97,27 +90,28 @@ a
     padding: 
         right: 10px
         left: 10px
+    
     @media screen and (max-width: 768px)
         padding-left: 20px
         padding-right: 20px
+    
            
     
     
 .button 
     background-color: #e45028
-    width: 97px
-    height: 35px
     border: none
     border-radius: 4px
     color: #ffffff
     font-family: Ubuntu
     font-size: 13px
     font-weight: 500
-    line-height: 30px
     text-transform: uppercase
     text-align: center
     cursor: pointer
     transition: 1s
+    padding: 11px 15px 11px 15px
+    line-height: 13px
     &:hover
         background-color: #c1401e
 
@@ -127,13 +121,17 @@ a
     @media screen and (max-width: 480px)
         align-items: flex-start 
 
+.wrapper
+    height: 100%
+   
+    
 
 .points
     right: 5vw
     top: 10vh
     z-index: 10
     position: fixed
-    @media screen and (max-width: 768px)
+    @media screen and (max-width: 900px)
         display: none
         overflow: hidden
     
@@ -183,13 +181,24 @@ a
             
 .points__link:hover:before
     content: ""
-    opacity: 1      
-
-   
-        
-   
-    
-    
+    opacity: 1     
 
 .main
     position: relative
+
+.title
+    color: #f9b43b
+    font-family: Gagalin
+    font-size: 72px
+    font-weight: 400
+    line-height: 64.05px
+
+.title-black
+    color: #2f3234
+
+.title-white
+    color: #ffffff
+
+.jc-centr
+    justify-content: center
+    display: flex

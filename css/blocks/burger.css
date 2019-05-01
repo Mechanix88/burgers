@@ -1,4 +1,19 @@
-.burger {
+.burger__list {
+  padding: 0;
+  position: relative;
+  margin: 0;
+}
+
+.burger__list::after {
+  content: "";
+  height: 15px;
+  width: 29px;
+  background-image: url(./../img/icons/arrow-scroll.svg);
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.burger__item {
   display: flex;
   align-items: center;
   position: relative;
@@ -6,12 +21,13 @@
 
 .burger-controlls__next {
   position: absolute;
-  left: 105%;
-  height: 16px;
+  right: -5%;
+  height: 15px;
   width: 29px;
-  background-image: url("./../img/icons/arrow-scroll.svg");
+  background-image: url(./../img/icons/arrow-scroll.svg);
   transform: rotate(-90deg);
   cursor: pointer;
+  top: 45%;
 }
 
 .burger-controlls__prev {
@@ -22,6 +38,7 @@
   background-image: url("./../img/icons/arrow-scroll.svg");
   transform: rotate(90deg);
   cursor: pointer;
+  top: 45%;
 }
 
 .burger__kkal-wrapper {
@@ -122,6 +139,10 @@
 .burger__composition:hover {
   background-color: #e35028;
   cursor: pointer;
+}
+
+.burger__wrapper {
+  position: relative;
 }
 
 .dropdown__list {

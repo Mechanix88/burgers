@@ -1,4 +1,4 @@
-.welcome {
+.welcome__wrapper {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .welcome {
+  .welcome__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +72,7 @@
 .welcome__subtitle {
   color: #ffffff;
   font-family: Lifehack;
-  font-size: 65px;
+  font-size: 64px;
   font-weight: 500;
   letter-spacing: -1.63px;
   line-height: 85px;
@@ -102,12 +102,14 @@
 
 .welcome__titles {
   padding-bottom: 25px;
+  width: 50%;
 }
 
 @media screen and (max-width: 768px) {
   .welcome__titles {
     text-align: center;
     height: 50%;
+    width: 100%;
   }
 }
 

@@ -3,22 +3,28 @@
   background-image: url("./../img/bg/footer-bg.jpg");
   bottom: 0;
   width: 100%;
-  min-height: 60px;
+  padding-top: 5px;
   color: #ffffff;
 }
 
 .footer-wrapper {
-  max-width: 960px;
-  padding-left: 10px;
+  max-width: 940px;
   padding-right: 10px;
+  padding-left: 10px;
   display: flex;
   margin: 0 auto;
   align-items: center;
   min-height: 60px;
 }
 
+@media screen and (max-width: 468px) {
+  .footer-wrapper {
+    flex-direction: column;
+  }
+}
+
 .contacts {
-  width: 50%;
+  width: 60%;
   color: #ffffff;
   font-family: Ubuntu;
   font-size: 14px;
@@ -26,16 +32,40 @@
   line-height: 24px;
 }
 
+@media screen and (max-width: 468px) {
+  .contacts {
+    text-align: center;
+    margin-bottom: 15px;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
 .social {
-  width: 50%;
+  width: 40%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 468px) {
+  .social {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .social__list {
   display: flex;
   list-style: none;
-  justify-content: flex-end;
   padding: 0;
   margin: 0;
+}
+
+.social__list li:first-child {
+  padding-left: 0px;
 }
 
 .social__item {

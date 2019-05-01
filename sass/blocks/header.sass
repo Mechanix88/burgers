@@ -9,48 +9,11 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
-
-.nav-burger 
-    background-color: #ffffff
-    border: 0
-    background: transparent
-    display: none
     @media screen and (max-width: 900px)
-        display: flex
-        order: 2
-        margin-left: 30px
-        cursor: pointer
-       
+        margin-right: 80px
 
-.nav-burger span
-    width: 24px
-    height: 4px
-    background-color: #ffffff
-    border-radius: 10px
-    display: block
-    position: relative
-        
-    &::after
-        content: ""
-        width: 24px
-        height: 4px
-        background-color: #ffffff
-        border-radius: 10px
-        display: block
-        position: absolute
-        top: 9px
-    &::before
-        content: ""
-        width: 24px
-        height: 4px
-        background-color: #ffffff
-        border-radius: 10px
-        display: block
-        position: absolute
-        bottom: 9px
 
-        
-   
+
         
 
 .nav__item 
@@ -91,6 +54,7 @@
         left: -15px
         bottom: 50%
         transform: translate(50%,50%)
+       
 
 .nav__list:first-child .nav__link:after
         content: ""
@@ -100,5 +64,6 @@
 
 .logo 
     margin-top: 12px
+    z-index: 99
     
 
