@@ -1,9 +1,9 @@
 .welcome__wrapper
     display: flex
-    align-items: flex-end
+    align-items: center
     justify-content: space-between
     margin: 0 auto
-    height: 55vh
+    height: 75vh
     @media screen and (max-width: 768px)
         display: flex
         flex-direction: column
@@ -14,12 +14,13 @@
 
 .welcome__burger
     background: url(./../img/bg/burger-bg.png)
-    height: 83%
+    height: 100%
     width: 50%
     background-repeat: no-repeat
     background-position: center center
     background-size: contain
     margin-right: 20px
+    margin-bottom: 70px
     @media screen and (max-width: 768px)
         margin-bottom: 40px
         margin-right: 0px
@@ -30,28 +31,7 @@
         background-size: contain
         height: 50%
     @media screen and (max-width: 480px)
-        margin-bottom: 40px
-        
-
-        
- 
-
-.welcome__main-title
-    color: #f9b43b
-    font-family: Gagalin
-    font-size: 72px
-    font-weight: 400
-    line-height: 85px
-    display: block
-    margin-bottom: 10px
-    margin-top: 0px
-    @media screen and (max-width: 480px)
-        line-height: 60px
-        font-size: 63px
-    @media screen and (max-width: 380px)
-        font-size: 50px
-        margin-bottom: 0px
-        
+        margin-bottom: 40px     
 
 .welcome__subtitle
     color: #ffffff
@@ -59,7 +39,7 @@
     font-size: 64px
     font-weight: 500
     letter-spacing: -1.63px
-    line-height: 85px
+    line-height: 1
     margin: 0px
     @media screen and (max-width: 480px)
         font-size: 58px
@@ -75,7 +55,6 @@
     height: auto
 
 .welcome__titles 
-   padding-bottom: 25px
    width: 50%
    @media screen and (max-width: 768px)
         text-align: center
@@ -89,7 +68,7 @@
     height: 16px
     width: 29px
     background-image: url("./../img/icons/arrow-scroll.svg")
-    bottom: 40px
+    bottom: 32px
     left: 50%
     transform: translate(-50%,-50%)
     cursor: pointer
