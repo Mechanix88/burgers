@@ -14,6 +14,7 @@ a
 
 .wrapper
     height: 100%
+    
    
 .main
     position: relative
@@ -25,6 +26,8 @@ a
 .conteiner 
     max-width: 960px
     margin: 0 auto
+    height: 100%
+    overflow: hidden
     padding: 
         right: 10px
         left: 10px
@@ -52,13 +55,14 @@ a
         background-image:url(./../img/bg/best-bg-768.jpg)
     @media screen and (max-width: 480px)
         background-image:url(./../img/bg/best-bg-phone.jpg)
-        background-position: right
+        background-position: center
         
 .burger
     background-color: #f9b43b
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%)
     display: flex
     align-items: center
+    overflow: hidden
 
 .team
     background-image:url(./../img/bg/four-bg.jpg)
@@ -87,8 +91,19 @@ a
     background-position: center
     display: flex
     position: relative
-    padding-left: 10%
-    padding-top: 10%
+    // padding-left: 10%
+    // padding-top: 10%
+
+.work
+    background-image:url(./../img/bg/work-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    overflow: hidden
+
+.flex-row
+    display: flex
 
 
 .button 
@@ -114,3 +129,12 @@ a
     
 
 
+#fullpage 
+  height: 100vh
+ 
+
+.open-js
+    display: block
+
+.close-js
+    display: none

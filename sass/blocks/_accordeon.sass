@@ -18,6 +18,8 @@
     cursor: pointer
     transition: 1s
     
+  
+    
 
 .accordeon__item--bg1
     background-image: url(./../img/bg/accordeon-bg1.jpg)
@@ -25,6 +27,9 @@
     height: 100vh
     background-size: cover
     background-repeat: no-repeat
+    position: relative
+
+        
 
 
 
@@ -56,6 +61,7 @@
     width: 80px
     border: none
     outline: none
+
     
 
 
@@ -83,12 +89,24 @@
     padding-top: 20px
     width: 100%
     align-items: center
+    z-index: 2
+    &:after
+        content: ""
+        background-color: rgba(20, 20, 20, 0.7)
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        top: 0
+        z-index: -1
+        
 
 .accordeon__text
     padding-left: 35px
     padding-top: 60px
     padding-right: 35px
     text-align: left
+    z-index: 2
 
 .accordeon-open
     width: 100%

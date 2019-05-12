@@ -2,19 +2,54 @@
     padding: 0
     position: relative
     margin: 0
-    &::after
-        content: ""
-        height: 15px
-        width: 29px
+    display: flex 
+    justify-content: center
+    height: 100%
+    overflow: hidden
+
+        
+.burger__arrow-back       
+        min-height: 16px
+        min-width: 29px
+        background-image: url(./../img/icons/arrow-scroll.svg)
+        transform: rotate(90deg)
+        cursor: pointer
+        display: flex
+        align-items: center
+        background-repeat: no-repeat
+        
+
+.burger__arrow-forward      
+        min-height: 16px
+        min-width: 29px
         background-image: url(./../img/icons/arrow-scroll.svg)
         transform: rotate(-90deg)
         cursor: pointer
-   
+        display: flex
+        align-items: center
+        background-repeat: no-repeat
+
+.burger__arrow
+    height: 100%
+    min-width: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    @media screen and (max-width: 768px)
+        min-width: 30px
+
     
 .burger__item
-    display: flex
+    display: flex !important
+    height: 100vh
     align-items: center
     position: relative
+    overflow: hidden
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        justify-content: center
+
 
 .burger-controlls__next
     position: absolute
@@ -40,9 +75,9 @@
 
 .burger__kkal-wrapper
     position: absolute
-    bottom: 0
+    bottom: -30%
     left: 0
-    transform: translateY(50%)
+    
     text-align: center
     opacity: 0.5
     vertical-align: middle
@@ -51,6 +86,11 @@
     color: #ffffff
     display: flex
     flex-direction: column
+    @media screen and (max-width: 768px)
+        left: 90%
+        bottom: 80%
+        
+        
 
 .burger__kkal
     height: 60px
@@ -64,6 +104,15 @@
     font-family: Gagalin
     color: #ffffff
     text-align: center
+
+.burger__block
+    position: relative
+    width: 50%
+    @media screen and (max-width: 768px)
+        width: 100%
+
+.burger__img
+    width: 100%
     
     
 
@@ -84,6 +133,9 @@
     line-height: 23.97px
     margin: 0
     margin-bottom: 35px
+    @media screen and (max-width: 768px)
+        max-width: 540px
+    
 
 .burger__price
     color: #e35028
@@ -94,26 +146,35 @@
     display: flex
     height: 52px
     align-items: baseline
+    @media screen and (max-width: 768px)
+        justify-content: center
+        font-size: 24px
     
 
 .burger__price-value
     font-size: 72px
     letter-spacing: -1.79px
     padding-right: 5px
+    @media screen and (max-width: 480px)
+        font-size: 50px
+        letter-spacing: -1.25px
     
 
 .burger__price-currency 
     letter-spacing: -0.75px
     margin-right: 29px
+    @media screen and (max-width: 768px)
+        margin-right: 10px
+        letter-spacing: -0.6px
 
 .burger__composition
     width: 90px
     height: 90px
     background-color: rgba(227, 80, 40, 0.4)
     position: absolute
-    top: 0
+    top: -30%
     left: 0
-    transform: translateY(-50%)
+    
     border-radius: 5px
     background-image: url(./../img/icons/burger.svg)
     background-repeat: no-repeat
@@ -127,6 +188,8 @@
     font-weight: 400
     line-height: 28.11px
     transition: 1s
+    
+    
 
 .burger__composition:hover
     background-color: rgba(227, 80, 40, 1)
@@ -138,67 +201,7 @@
 
   
 
-.dropdown__list
-    display: none
-    list-style: none
-    padding: 0
-    margin: 0
-    cursor: pointer
-    transition: 1s
-    border-radius: 5px
-    opacity: 0.4
-    padding: 15px
-    
-   
 
-
-    
-    
-
-.dropdown__item
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin-bottom: 15px
-    
-  
-    
-.dropdown:hover .dropdown__list
-    width: 270px
-    display: flex
-    flex-direction: column
-    position: absolute
-    left: 100%
-    top: 0
-    background-color: #ffffff
-    opacity: 0.9
-    cursor: pointer
-    
-  
-
-
-   
-
-.dropdown__text
-    color: #2f3234
-    font-family: Ubuntu
-    font-size: 14px
-    font-weight: 500
-    line-height: 24px
-    flex: 1
-    
-
-.dropdown__weight
-    color: #2f3234
-    font-family: Ubuntu
-    font-size: 14px
-    font-weight: 300
-    line-height: 24px
-
-.dropdown__icon
-    margin-right: 22px
-    width: 40px
-    height: 40px
 
 
  
