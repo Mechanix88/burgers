@@ -9,8 +9,8 @@
 
         
 .burger__arrow-back       
-        min-height: 16px
-        min-width: 29px
+        min-height: 1rem
+        min-width: 1.8125rem
         background-image: url(./../img/icons/arrow-scroll.svg)
         transform: rotate(90deg)
         cursor: pointer
@@ -20,8 +20,8 @@
         
 
 .burger__arrow-forward      
-        min-height: 16px
-        min-width: 29px
+        min-height: 1rem
+        min-width: 1.8125rem
         background-image: url(./../img/icons/arrow-scroll.svg)
         transform: rotate(-90deg)
         cursor: pointer
@@ -31,13 +31,13 @@
 
 .burger__arrow
     height: 100%
-    min-width: 40px
+    min-width: 2.5rem
     display: flex
     justify-content: center
     align-items: center
     cursor: pointer
     @media screen and (max-width: 768px)
-        min-width: 30px
+        min-width: 1.875rem
 
     
 .burger__item
@@ -54,8 +54,8 @@
 .burger-controlls__next
     position: absolute
     right: -5%
-    height: 15px
-    width: 29px
+    height: 0.9375rem
+    width: 1.8125rem
     background-image: url(./../img/icons/arrow-scroll.svg)
     transform: rotate(-90deg)
     cursor: pointer
@@ -65,8 +65,8 @@
 .burger-controlls__prev
     position: absolute
     left: -5%
-    height: 16px
-    width: 29px
+    height: 1rem
+    width: 1.8125rem
     background-image: url("./../img/icons/arrow-scroll.svg")
     transform: rotate(90deg)
     cursor: pointer
@@ -77,33 +77,41 @@
     position: absolute
     bottom: -30%
     left: 0
-    
     text-align: center
     opacity: 0.5
     vertical-align: middle
     font-family: Gagalin
-    font-size: 20px
+    font-size: 1.25rem
     color: #ffffff
     display: flex
     flex-direction: column
     @media screen and (max-width: 768px)
-        left: 90%
-        bottom: 80%
+        left: 85%
+        bottom: 90%
+    @media screen and (max-width: 480px)
+        left: 80%
+        bottom: 100%
         
         
 
 .burger__kkal
-    height: 60px
+    height: 3.75rem
     background-image: url(./../img/icons/kkal.svg)
     background-size: cover
-    width: 60px
-    line-height: 72px
+    width: 3.75rem
+    line-height: 4.5rem
+    position: relative
 
 .burger__kkal-text
-    font-size: 14px
+    font-size: 0.875rem
     font-family: Gagalin
     color: #ffffff
     text-align: center
+
+.burger__kkal-sum
+    position: absolute
+    top: 1.5625rem
+    left: 0.8125rem
 
 .burger__block
     position: relative
@@ -119,75 +127,86 @@
 .burger__title 
     color: #ffffff
     font-family: Gagalin
-    font-size: 72px
+    font-size: 4.5rem
     font-weight: 400
-    line-height: 63.93px
+    line-height: 3.9956rem
     margin: 0
-    margin-bottom: 40px
+    margin-bottom: 2.5rem
 
 .burger__text
     color: #ffffff
     font-family: Ubuntu
-    font-size: 14px
+    font-size: 0.875rem
     font-weight: 300
-    line-height: 23.97px
+    line-height: 1.4981rem
     margin: 0
-    margin-bottom: 35px
+    margin-bottom: 2.1875rem
     @media screen and (max-width: 768px)
-        max-width: 540px
+        max-width: 33.75rem
     
 
 .burger__price
     color: #e35028
     font-family: Gagalin
-    font-size: 30px
+    font-size: 1.875rem
     font-weight: 400
-    line-height: 28.08px
+    line-height: 1.755rem
     display: flex
-    height: 52px
+    height: 3.25rem
     align-items: baseline
     @media screen and (max-width: 768px)
         justify-content: center
-        font-size: 24px
+        font-size: 1.5rem
     
 
 .burger__price-value
-    font-size: 72px
-    letter-spacing: -1.79px
-    padding-right: 5px
+    font-size: 4.5rem
+    letter-spacing: -0.1119rem
+    padding-right: 0.3125rem
     @media screen and (max-width: 480px)
-        font-size: 50px
-        letter-spacing: -1.25px
+        font-size: 3.125rem
+        letter-spacing: -0.0781rem
     
 
 .burger__price-currency 
-    letter-spacing: -0.75px
-    margin-right: 29px
+    letter-spacing: -0.0469rem
+    margin-right: 1.8125rem
     @media screen and (max-width: 768px)
-        margin-right: 10px
-        letter-spacing: -0.6px
+        margin-right: 0.625rem
+        letter-spacing: -0.0375rem
 
 .burger__composition
-    width: 90px
-    height: 90px
+    width: 5.625rem
+    height: 5.625rem
     background-color: rgba(227, 80, 40, 0.4)
     position: absolute
     top: -30%
     left: 0
-    
-    border-radius: 5px
-    background-image: url(./../img/icons/burger.svg)
+    border-radius: 0.3125rem
     background-repeat: no-repeat
-    background-position: center 15px
+    background-position: center 0.9375rem
     display: flex
-    align-items: flex-end
+    align-items: center
+    flex-direction: column
     justify-content: center
     color: #ffffff
     font-family: Gagalin
-    font-size: 14px
+    font-size: 0.875rem
     font-weight: 400
-    line-height: 28.11px
+    line-height: 1.7569rem
     transition: 1s
+    @media screen and (max-width: 768px)
+        left: 0%
+        top: -15%
+    @media screen and (max-width: 480px)
+        left: 0%
+        top: -40%
+
+.burger__composition-svg
+    display: flex
+    width: 2.875rem
+    height: 2.75rem
+       
     
     
 

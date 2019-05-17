@@ -84,7 +84,9 @@
                 <div class="conteiner">
                     <header class="header">
                         <div class="logo">
-                            <img src="./img/logo/logo.svg" alt="Логотип">
+                            <svg>
+                                <use xlink:href="./sprite.svg#logo">
+                            </svg>
                         </div>
                         <div class="header__buttons">
                             <nav class="nav">
@@ -135,7 +137,9 @@
                         <h2 class="title title-black">Мы лучшие</h2>
                         <ul class="best__list">
                             <li class="best__item">
-                                <div class="best__icon-meat"></div>
+                                <svg class="best__icon">
+                                    <use xlink:href="./sprite.svg#meat">
+                                </svg>
                                 <div class="best__text-block">
                                     <h3 class="best__subtitle">100% свежее мясо</h3>
                                     <p class="best__desc">Драма представляет собой деструктивный цикл. Анапест
@@ -143,7 +147,9 @@
                                 </div>
                             </li>
                             <li class="best__item">
-                                <div class="best__icon-hand"></div>
+                                <svg class="best__icon best__icon--hand">
+                                    <use xlink:href="./sprite.svg#hand">
+                                </svg>
                                 <div class="best__text-block">
                                     <h3 class="best__subtitle">Ручная сборка</h3>
                                     <p class="best__desc">Драма представляет собой деструктивный цикл. Анапест
@@ -152,7 +158,9 @@
                                 </div>
                             </li>
                             <li class="best__item">
-                                <div class="best__icon-natural"></div>
+                                <svg class="best__icon">
+                                    <use xlink:href="./sprite.svg#natural">
+                                </svg>
                                 <div class="best__text-block">
                                     <h3 class="best__subtitle">Натуральные<br> ингредиенты</h3>
                                     <p class="best__desc">Драма представляет собой деструктивный цикл. Анапест
@@ -172,7 +180,11 @@
                     <ul class="burger__list">
                         <li class="burger__item">
                             <div class="burger__block">
-                                <div class="burger__composition dropdown">Состав
+                                <div class="burger__composition dropdown">
+                                        <svg class="burger__composition-svg">
+                                                <use xlink:href="./sprite.svg#burger">
+                                        </svg>
+                                            Состав
                                     <ul class="dropdown__list">
                                         <li class="dropdown__item">
                                             <svg class="dropdown__icon">
@@ -219,7 +231,10 @@
                                     </ul>
                                 </div>
                                 <div class="burger__kkal-wrapper">
-                                    <div class="burger__kkal">1200</div>
+                                    <svg class="burger__kkal">
+                                        <use xlink:href="./sprite.svg#kkal">
+                                    </svg>
+                                    <span class="burger__kkal-sum">1200</span>
                                     <div class="burger__kkal-text">ккал</div>
                                 </div>
                                 <img class="burger__img" src="./img/burgers-slider/burger-1.png" alt="Бургер">
@@ -243,7 +258,11 @@
                         </li>
                         <li class="burger__item">
                                 <div class="burger__block">
-                                    <div class="burger__composition dropdown">Состав
+                                    <div class="burger__composition dropdown">
+                                        <svg class="burger__composition-svg">
+                                            <use xlink:href="./sprite.svg#burger">
+                                        </svg>
+                                        Состав
                                         <ul class="dropdown__list">
                                             <li class="dropdown__item">
                                                 <svg class="dropdown__icon">
@@ -637,16 +656,32 @@
                         <div class="social">
                             <ul class="social__list">
                                 <li class="social__item">
-                                    <a class="social__link social__link--vk" href="#"></a>
+                                    <a class="social__link" href="#">
+                                        <svg class="social__button">
+                                            <use xlink:href="./sprite.svg#vk">
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="social__item">
-                                    <a class="social__link social__link--facebook" href="#"></a>
+                                    <a class="social__link" href="#">
+                                        <svg class="social__button">
+                                            <use xlink:href="./sprite.svg#fb"></svg>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="social__item">
-                                    <a class="social__link social__link--insta" href="#"></a>
+                                    <a class="social__link" href="#">
+                                        <svg class="social__button">
+                                            <use xlink:href="./sprite.svg#inst"></svg>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="social__item">
-                                    <a class="social__link social__link--twitter" href="#"></a>
+                                    <a class="social__link" href="#">
+                                        <svg class="social__button">
+                                            <use xlink:href="./sprite.svg#twitter"></svg>
+                                        </svg>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -769,9 +804,13 @@
 })
             });
             $('#fullpage').fullpage({
-    sectionSelector: '.section'
-            });
+    sectionSelector: '.section' 
     
+            });
+            
+ 
+    
+
             
 
             
