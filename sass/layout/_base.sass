@@ -5,6 +5,7 @@
 html, body 
     height: 100%
     width: 100%
+    font-size: 16px
 
 img
 	max-height: 100% 
@@ -14,6 +15,7 @@ a
 
 .wrapper
     height: 100%
+    
    
 .main
     position: relative
@@ -23,14 +25,16 @@ a
     width: 100%
 
 .conteiner 
-    max-width: 960px
+    max-width: 60rem
     margin: 0 auto
+    height: 100%
+    overflow: hidden
     padding: 
-        right: 10px
-        left: 10px
+        right: 0.625rem
+        left: 0.625rem
     @media screen and (max-width: 768px)
-        padding-left: 20px
-        padding-right: 20px
+        padding-left: 1.25rem
+        padding-right: 1.25rem
 
 .welcome
     background-image:url(./../img/bg/first-bg.jpg) 
@@ -52,13 +56,14 @@ a
         background-image:url(./../img/bg/best-bg-768.jpg)
     @media screen and (max-width: 480px)
         background-image:url(./../img/bg/best-bg-phone.jpg)
-        background-position: right
+        background-position: center
         
 .burger
     background-color: #f9b43b
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%)
     display: flex
     align-items: center
+    overflow: hidden
 
 .team
     background-image:url(./../img/bg/four-bg.jpg)
@@ -87,8 +92,19 @@ a
     background-position: center
     display: flex
     position: relative
-    padding-left: 10%
-    padding-top: 10%
+    // padding-left: 10%
+    // padding-top: 10%
+
+.work
+    background-image:url(./../img/bg/work-bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    overflow: hidden
+
+.flex-row
+    display: flex
 
 
 .button 
@@ -97,7 +113,7 @@ a
     border-radius: 4px
     color: #ffffff
     font-family: Ubuntu
-    font-size: 13px
+    font-size: 0.8125rem
     font-weight: 500
     text-transform: uppercase
     text-align: center
@@ -109,8 +125,18 @@ a
         background-color: #c1401e
 
 .header-btn
-    @media screen and (max-width: 900px)
+    @media screen and (max-width: 920px)
         margin-right: 60px
     
 
+
+#fullpage 
+  height: 100vh
+ 
+
+.open-js
+    display: block
+
+.close-js
+    display: none
 
