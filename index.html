@@ -807,6 +807,16 @@
     sectionSelector: '.section' 
     
             });
+
+        $(".team__dropdown").hide().prev().click(function(){
+            $(".team__dropdown").not(this).slideUp();
+            $(this).next().not(":visible").slideDown();
+            });
+        $(".accordeon__item").click(function(){
+            $(".accordeon__desc").toggle();
+        })
+
+       
             
  
     
