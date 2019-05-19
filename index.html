@@ -137,9 +137,11 @@
                         <h2 class="title title-black">Мы лучшие</h2>
                         <ul class="best__list">
                             <li class="best__item">
-                                <svg class="best__icon">
-                                    <use xlink:href="./sprite.svg#meat">
-                                </svg>
+                                <div class="best__icon-wrap">
+                                    <svg class="best__icon">
+                                        <use xlink:href="./sprite.svg#meat">
+                                    </svg>
+                                </div>
                                 <div class="best__text-block">
                                     <h3 class="best__subtitle">100% свежее мясо</h3>
                                     <p class="best__desc">Драма представляет собой деструктивный цикл. Анапест
@@ -147,9 +149,11 @@
                                 </div>
                             </li>
                             <li class="best__item">
-                                <svg class="best__icon best__icon--hand">
-                                    <use xlink:href="./sprite.svg#hand">
-                                </svg>
+                                <div class="best__icon-wrap">
+                                    <svg class="best__icon best__icon--hand">
+                                        <use xlink:href="./sprite.svg#hand">
+                                    </svg>
+                                </div>
                                 <div class="best__text-block">
                                     <h3 class="best__subtitle">Ручная сборка</h3>
                                     <p class="best__desc">Драма представляет собой деструктивный цикл. Анапест
@@ -158,9 +162,11 @@
                                 </div>
                             </li>
                             <li class="best__item">
-                                <svg class="best__icon">
-                                    <use xlink:href="./sprite.svg#natural">
-                                </svg>
+                                <div class="best__icon-wrap">
+                                    <svg class="best__icon">
+                                        <use xlink:href="./sprite.svg#natural">
+                                    </svg>
+                                </div>
                                 <div class="best__text-block">
                                     <h3 class="best__subtitle">Натуральные<br> ингредиенты</h3>
                                     <p class="best__desc">Драма представляет собой деструктивный цикл. Анапест
@@ -182,7 +188,7 @@
                             <div class="burger__block">
                                 <div class="burger__composition dropdown">
                                         <svg class="burger__composition-svg">
-                                                <use xlink:href="./sprite.svg#burger">
+                                            <use xlink:href="./sprite.svg#burger">
                                         </svg>
                                             Состав
                                     <ul class="dropdown__list">
@@ -309,9 +315,12 @@
                                         </ul>
                                     </div>
                                     <div class="burger__kkal-wrapper">
-                                        <div class="burger__kkal">1200</div>
-                                        <div class="burger__kkal-text">ккал</div>
-                                    </div>
+                                            <svg class="burger__kkal">
+                                                <use xlink:href="./sprite.svg#kkal">
+                                            </svg>
+                                            <span class="burger__kkal-sum">1200</span>
+                                            <div class="burger__kkal-text">ккал</div>
+                                        </div>
                                     <img class="burger__img" src="./img/burgers-slider/burger-2.png" alt="Бургер">
                                 </div>
                                 <div class="burger__desc">
@@ -397,7 +406,7 @@
                 </div>
             </section>
             <section class="section accordeon" id="accordeon-link">
-                <h2 class="title title-white">Меню</h2>
+                <h2 class="title title-white title-absolute">Меню</h2>
                 <div class="accordeon__wrapper">
                     <ul class="accordeon__list">
                         <li class="accordeon__item">
@@ -812,9 +821,23 @@
             $(".team__dropdown").not(this).slideUp();
             $(this).next().not(":visible").slideDown();
             });
-        $(".accordeon__item").click(function(){
-            $(".accordeon__desc").toggle();
-        })
+        // $(".accordeon__item").click(function(){
+        //     $(".accordeon__desc").toggle();
+        // })
+
+//         $(".accordeon__item").click(function() {
+//             $(".accordeon__desc").toggleClass("open-js")
+//             .siblings().removeClass('close-js');
+// })
+
+$(".accordeon__item").on("click", function() {
+    $this = $(event.target);
+    $('.accordeon__desc').addClass("open-js");
+    
+
+});
+    
+</script>
 
        
             
