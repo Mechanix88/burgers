@@ -261,6 +261,7 @@ a {
 
 .open-js {
   display: block;
+  width: 300px !important;
 }
 
 .close-js {
@@ -505,16 +506,24 @@ a {
   }
 }
 
+.best__icon-wrap {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
 .best__icon {
-  width: 6.0625rem;
-  height: 5.5625rem;
+  min-width: 6.0625rem;
+  min-height: 5.5625rem;
   display: flex;
   justify-content: center;
 }
 
 .best__icon--hand {
-  width: 4.5625rem;
-  height: 5.3125rem;
+  min-width: 4.5625rem;
+  min-height: 5.3125rem;
+  transform: translateX(25%);
 }
 
 .best__subtitle {
@@ -843,7 +852,7 @@ a {
 }
 
 .burger__arrow-back {
-  min-height: 1rem;
+  min-height: 2rem;
   min-width: 1.8125rem;
   background-image: url(./../img/icons/arrow-scroll.svg);
   transform: rotate(90deg);
@@ -854,7 +863,7 @@ a {
 }
 
 .burger__arrow-forward {
-  min-height: 1rem;
+  min-height: 2rem;
   min-width: 1.8125rem;
   background-image: url(./../img/icons/arrow-scroll.svg);
   transform: rotate(-90deg);
@@ -894,28 +903,6 @@ a {
   }
 }
 
-.burger-controlls__next {
-  position: absolute;
-  right: -5%;
-  height: 0.9375rem;
-  width: 1.8125rem;
-  background-image: url(./../img/icons/arrow-scroll.svg);
-  transform: rotate(-90deg);
-  cursor: pointer;
-  top: 45%;
-}
-
-.burger-controlls__prev {
-  position: absolute;
-  left: -5%;
-  height: 1rem;
-  width: 1.8125rem;
-  background-image: url("./../img/icons/arrow-scroll.svg");
-  transform: rotate(90deg);
-  cursor: pointer;
-  top: 45%;
-}
-
 .burger__kkal-wrapper {
   position: absolute;
   bottom: -30%;
@@ -946,8 +933,6 @@ a {
 
 .burger__kkal {
   height: 3.75rem;
-  background-image: url(./../img/icons/kkal.svg);
-  background-size: cover;
   width: 3.75rem;
   line-height: 4.5rem;
   position: relative;
@@ -1122,6 +1107,10 @@ a {
     padding-left: 0px;
     flex-direction: column;
   }
+}
+
+.in {
+  display: block;
 }
 
 .team__list {
@@ -1634,6 +1623,12 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
   outline: none;
 }
 
+@media screen and (max-width: 480px) {
+  .accordeon__link {
+    width: 3rem;
+  }
+}
+
 .accordeon__desc {
   max-width: 29.4375rem;
   color: #ffffff;
@@ -1644,10 +1639,10 @@ input[type="checkbox"]:checked + .delivery-block__checkbox-label:after {
   margin: 0 auto;
   padding-top: 3.75rem;
   background: rgba(58, 61, 62, 0.9);
-  width: 500px;
+  width: 0px;
   overflow: hidden;
   height: 100vh;
-  display: none;
+  transition: 1s;
 }
 
 .accordeon__subtitle {
@@ -2153,6 +2148,12 @@ td, th {
 
 .title--center {
   text-align: center;
+}
+
+.title-absolute {
+  position: absolute;
+  left: 30px;
+  top: 60px;
 }
 
 .work-wrapper {
