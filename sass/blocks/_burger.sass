@@ -9,8 +9,8 @@
 
         
 .burger__arrow-back       
-        min-height: 2rem
-        min-width: 1.8125rem
+        width: 28px
+        height: 17px
         background-image: url(./../img/icons/arrow-scroll.svg)
         transform: rotate(90deg)
         cursor: pointer
@@ -20,8 +20,8 @@
         
 
 .burger__arrow-forward      
-        min-height: 2rem
-        min-width: 1.8125rem
+        width: 28px
+        height: 17px
         background-image: url(./../img/icons/arrow-scroll.svg)
         transform: rotate(-90deg)
         cursor: pointer
@@ -54,8 +54,7 @@
 
 .burger__kkal-wrapper
     position: absolute
-    bottom: -30%
-    left: 0
+    top: 100%
     text-align: center
     opacity: 0.5
     vertical-align: middle
@@ -65,17 +64,17 @@
     display: flex
     flex-direction: column
     @media screen and (max-width: 768px)
-        left: 85%
-        bottom: 90%
-    @media screen and (max-width: 480px)
-        left: 80%
-        bottom: 100%
+        right: 0%
+        top: 0%
+    // @media screen and (max-width: 480px)
+    //     left: 80%
+    //     bottom: 100%
         
         
 
 .burger__kkal
-    height: 3.75rem
-    width: 3.75rem
+    width: 60px
+    height: 60px
     line-height: 4.5rem
     position: relative
 
@@ -174,15 +173,15 @@
     transition: 1s
     @media screen and (max-width: 768px)
         left: 0%
-        top: -15%
+        top: 0%
     @media screen and (max-width: 480px)
         left: 0%
-        top: -40%
+        top: 0%
 
 .burger__composition-svg
     display: flex
-    width: 2.875rem
-    height: 2.75rem
+    width: 46px
+    height: 44px
        
     
     

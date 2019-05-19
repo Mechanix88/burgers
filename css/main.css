@@ -123,6 +123,7 @@ a {
 .section {
   height: 100vh;
   width: 100%;
+  min-height: 650px;
 }
 
 .conteiner {
@@ -852,8 +853,8 @@ a {
 }
 
 .burger__arrow-back {
-  min-height: 2rem;
-  min-width: 1.8125rem;
+  width: 28px;
+  height: 17px;
   background-image: url(./../img/icons/arrow-scroll.svg);
   transform: rotate(90deg);
   cursor: pointer;
@@ -863,8 +864,8 @@ a {
 }
 
 .burger__arrow-forward {
-  min-height: 2rem;
-  min-width: 1.8125rem;
+  width: 28px;
+  height: 17px;
   background-image: url(./../img/icons/arrow-scroll.svg);
   transform: rotate(-90deg);
   cursor: pointer;
@@ -905,8 +906,7 @@ a {
 
 .burger__kkal-wrapper {
   position: absolute;
-  bottom: -30%;
-  left: 0;
+  top: 100%;
   text-align: center;
   opacity: 0.5;
   vertical-align: middle;
@@ -919,21 +919,14 @@ a {
 
 @media screen and (max-width: 768px) {
   .burger__kkal-wrapper {
-    left: 85%;
-    bottom: 90%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .burger__kkal-wrapper {
-    left: 80%;
-    bottom: 100%;
+    right: 0%;
+    top: 0%;
   }
 }
 
 .burger__kkal {
-  height: 3.75rem;
-  width: 3.75rem;
+  width: 60px;
+  height: 60px;
   line-height: 4.5rem;
   position: relative;
 }
@@ -1060,21 +1053,21 @@ a {
 @media screen and (max-width: 768px) {
   .burger__composition {
     left: 0%;
-    top: -15%;
+    top: 0%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .burger__composition {
     left: 0%;
-    top: -40%;
+    top: 0%;
   }
 }
 
 .burger__composition-svg {
   display: flex;
-  width: 2.875rem;
-  height: 2.75rem;
+  width: 46px;
+  height: 44px;
 }
 
 .burger__composition:hover {
@@ -2256,6 +2249,6 @@ td, th {
 
 .dropdown__icon {
   margin-right: 1.375rem;
-  width: 2.9375rem;
-  height: 2.5rem;
+  width: 44px;
+  height: 39px;
 }
