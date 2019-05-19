@@ -433,8 +433,8 @@ a {
 
 .first-block__arrow-down {
   position: absolute;
-  height: 1rem;
-  width: 1.8125rem;
+  width: 29px;
+  height: 16px;
   background-image: url(./../img/icons/arrow-scroll.svg);
   bottom: 2rem;
   left: 50%;
