@@ -79,12 +79,26 @@
                         </nav>
                     </div>
             </div>
+            <div class="reviews-popup">
+                <div class="conteiner jc-centr">
+                    <div class="reviews-popup__wrapper">
+                        <h4 class="reviews__title reviews--black">Константин Спилберг</h4>
+                        <p class="reviews__desc reviews--black">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть...
+                            Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
+                            расплавленным.</p>
+                        <button class="close-reviews">
+                            <span class="close-reviews__lines"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         <main class="main" id="fullpage">
             <section class="section welcome" id="welcome-link">
                 <div class="conteiner">
                     <header class="header">
                         <div class="logo">
-                            <svg>
+                            <svg class="logo__svg">
                                 <use xlink:href="./sprite.svg#logo">
                             </svg>
                         </div>
@@ -389,8 +403,8 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="team__item">
-                            <a class="team__link">Николай Иванов</a>
+                        <li class="team__item ">
+                            <a class="team__link active">Николай Иванов</a>
                             <div class="team__dropdown">
                                 <div class="team__item-img">
                                     <img class="team__item-avatar" src="./img/bg/team__avatar.jpg" alt="Аватар">
@@ -699,54 +713,54 @@
                 </footer>
 
             </section>
-            <div class="reviews-popup">
-                <div class="conteiner jc-centr">
-                    <div class="reviews-popup__wrapper">
-                        <h4 class="reviews__title reviews--black">Константин Спилберг</h4>
-                        <p class="reviews__desc reviews--black">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть...
-                            Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
-                            расплавленным.</p>
-                        <button class="close-reviews">
-                            <span class="close-reviews__lines"></span>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-
-
         </main>
     </div>
 
     <script>
         var link = document.querySelector(".burger-menu");
         var button = document.querySelector(".mobile-popup");
-        var accordeon = document.querySelectorAll("li.accordeon__item");
-        var accordeonOpen = document.querySelector(".accordeon__desc");
+        var accordeon = document.querySelectorAll(".team__link");
+        var accordeonOpen = document.getElementsByClassName(".team__dropdown");
         var closeReviews = document.querySelector(".close-reviews")
-        var reviewsPopup = document.querySelector(".reviews-popup")
-        var buttonReviews = document.querySelector(".button--reviews")
-        link.addEventListener("click", function (evt) {
+        let reviewsPopup = document.querySelector(".reviews-popup")
+        let buttonReviews = document.querySelectorAll(".button--reviews")
+        let accordeonMenu = document.querySelectorAll(".accordeon__item")
+        let accordeonDesc = document.querySelectorAll(".accordeon__desc")
+        link.addEventListener("click", function (e) {
             link.classList.toggle("burger-menu__active");
-            console.log("Клик");
         });
-        link.addEventListener("click", function (event) {
+        link.addEventListener("click", function (e) {
             button.classList.toggle("mobile-popup-open");
-            console.log("Клик");
         });
-        closeReviews.addEventListener("click", function (event2) {
-            reviewsPopup.classList.toggle("close-js");
-            console.log("closeReviews");
-        });
-        buttonReviews.addEventListener("click", function (event3) {
-            reviewsPopup.classList.toggle("open-js");
-            console.log(buttonReviews);
-        });
+        for( let i = 0; i < buttonReviews.length; i++) {
+            buttonReviews[i].onclick = function(){
+            reviewsPopup.classList.add('open-js')}}
+                    
+        reviewsPopup.addEventListener('click' , function() {
+            reviewsPopup.classList.remove('open-js');
+            });
+            
+    
+       
+        for(var i = 0; i < accordeon.length; i++) {
+            accordeon[i].addEventListener('click', function() {
+                if(!(this.classList.contains('active'))){
+                    for(var i = 0; i < accordeon.length;i++){
+                        accordeon[i].classList.remove('active') 
+                    }
+                    this.classList.add('active')
+                }
+            })
+        }
+        for(let i = 0; i < accordeonMenu.length; i++){
+            accordeonMenu[i].onclick = function() {
+                accordeonDesc[i].classList.toggle('accordeon--active')
+                console.log(accordeonMenu[i])   
+                
+            }
+        }
+        
+        
 
 
 
@@ -754,52 +768,13 @@
 
 
 
-        // accordeon.addEventListener("click",function(evnt){
-        // accordeonOpen.classList.toggle("accordeon-open") ;
-        // console.log ("Клик") ;}); 
-
-
-
-
-
-
-
-
-
-
-
-        // var name = 'Евгений';
-        // if (name == 'Дмитрий') {
-        //     console.log("Да");
-        // } else {
-        //     console.log('Нет')
-        // }
-        // for (
-        //     var i = 0;
-        //     i < 5;
-        //     i++
-        // ) {
-        //     console.log(i);
-        // }
-
-
-
-
-
-        // function sum(a, b) {
-        //     var result = a + b;
-        //     return result;
-        // }
-        // var q = sum(2, 3);
-        // {
-        //     console.log(q);
-        // }
-        // var w = 100;
-        // var e = 200;
-
-
-
-
+        // accordeon.addEventListener('click' , function (e) {
+        //     // // if (e.target.className === "accordeon__link") ;
+        //     //     console.log (e.target)
+        //     //     // e.target.previousSibling.classList.toggle("accordeon--active") ;
+        //     //     // console.log (e.target)
+        //     accordeon.classList.toggle("accordeon--active");
+        //     console.log("Клик");
 
     </script>   
 <script type="text/javascript">
@@ -817,10 +792,10 @@
     
             });
 
-        $(".team__dropdown").hide().prev().click(function(){
-            $(".team__dropdown").not(this).slideUp();
-            $(this).next().not(":visible").slideDown();
-            });
+        // $(".team__dropdown").hide().prev().click(function(){
+        //     $(".team__dropdown").not(this).slideUp();
+        //     $(this).next().not(":visible").slideDown();
+        //     });
         // $(".accordeon__item").click(function(){
         //     $(".accordeon__desc").toggle();
         // })
@@ -830,12 +805,13 @@
 //             .siblings().removeClass('close-js');
 // })
 
-$(".accordeon__item").on("click", function() {
-    $this = $(event.target);
-    $('.accordeon__desc').addClass("open-js");
+// $(".accordeon__item").on("click", function() {
+//     $this = $(event.target);
+//     $('.accordeon__desc').addClass("open-js");
     
 
-});
+// });
+
     
 </script>
 

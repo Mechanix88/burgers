@@ -82,9 +82,10 @@
     width: 0px
     overflow: hidden
     height: 100vh
-    transition: 1s
     
     
+    
+
 
 .accordeon__subtitle 
     display: flex
@@ -112,11 +113,15 @@
     padding-right: 2.1875rem
     text-align: left
     z-index: 2
+    @media screen and (max-width: 480px)
+        padding-left: 1rem
+        padding-right: 1rem
+        padding-top: 2rem
 
-.accordeon-open
+.accordeon--active
     width: 100%
 
-    
+
 
     
  
