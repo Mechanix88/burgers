@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="./css/fullpage.css">
     <link rel="stylesheet" href="./css/slick.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="./js/slick.js"></script>
-    <script type="text/javascript" src="./js/fullpage.js"></script> 
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <script type="text/javascript" src="./js/map.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=68fd7cb7-9356-4ccd-bd50-b3acccc1c23c&lang=ru_RU" type="text/javascript"></script>
+    </script>
+    </script>
     <title>Burger</title>
 </head>
-
 <body>
     <div class="wrapper">
             <div class="points">
@@ -79,12 +83,26 @@
                         </nav>
                     </div>
             </div>
+            <div class="reviews-popup">
+                <div class="conteiner jc-centr">
+                    <div class="reviews-popup__wrapper">
+                        <h4 class="reviews__title reviews--black">Константин Спилберг</h4>
+                        <p class="reviews__desc reviews--black">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            невозможно забыть...
+                            Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
+                            расплавленным.</p>
+                        <button class="close-reviews">
+                            <span class="close-reviews__lines"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         <main class="main" id="fullpage">
             <section class="section welcome" id="welcome-link">
                 <div class="conteiner">
                     <header class="header">
                         <div class="logo">
-                            <svg>
+                            <svg class="logo__svg">
                                 <use xlink:href="./sprite.svg#logo">
                             </svg>
                         </div>
@@ -389,7 +407,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="team__item">
+                        <li class="team__item ">
                             <a class="team__link">Николай Иванов</a>
                             <div class="team__dropdown">
                                 <div class="team__item-img">
@@ -409,7 +427,7 @@
                 <h2 class="title title-white title-absolute">Меню</h2>
                 <div class="accordeon__wrapper">
                     <ul class="accordeon__list">
-                        <li class="accordeon__item">
+                        <li class="accordeon__item" id="menu__item-3">
                             <button class="accordeon__link accordeon__item--bg1">
                                 <span class="accordeon__subtitle">Для мясоедов</span>
                             </button>
@@ -429,7 +447,7 @@
                                     стал особенно чутко относиться к слову.</p>
                             </div>
                         </li>
-                        <li class="accordeon__item">
+                        <li class="accordeon__item" id="menu__item-3">
                             <button class="accordeon__link accordeon__item--bg2">
                                 <span class="accordeon__subtitle">Вегетарианское</span>
                             </button>
@@ -449,7 +467,7 @@
                                     стал особенно чутко относиться к слову.</p>
                             </div>
                         </li>
-                        <li class="accordeon__item">
+                        <li class="accordeon__item" id="menu__item-3">
                             <button class="accordeon__link accordeon__item--bg3">
                                 <span class="accordeon__subtitle">Диетическое</span>
                             </button>
@@ -580,36 +598,36 @@
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="name">Имя</label>
-                                        <input class="delivery-block__input" id="name" type="text">
+                                        <input class="delivery-block__input" id="name" type="text" name="name" required>
                                     </div>
                                     <div class="delivery-block__group margin">
                                         <label class="delivery-block__label " for="phone">Телефон</label>
                                         <input class="delivery-block__input" id="phone" type="text"
-                                            placeholder="89212264923">
+                                            placeholder="89212264923" name="phone" required>
                                     </div>
                                 </div>
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group margin">
                                         <label class="delivery-block__label" for="street">Улица</label>
-                                        <input class="delivery-block__input" id="street" type="text">
+                                        <input class="delivery-block__input" id="street" type="text" name="street" required>
                                     </div>
                                 </div>
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="home">Дом</label>
-                                        <input class="delivery-block__input" id="home" type="text">
+                                        <input class="delivery-block__input" id="home" type="text" name="home" required>
                                     </div>
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="housing">Корпус</label>
-                                        <input class="delivery-block__input" id="housing" type="text">
+                                        <input class="delivery-block__input" id="housing" type="text" name="housing" required>
                                     </div>
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="apartment">Квартира</label>
-                                        <input class="delivery-block__input" id="apartment" type="text">
+                                        <input class="delivery-block__input" id="apartment" type="text" name="apartment" required>
                                     </div>
                                     <div class="delivery-block__group margin">
                                         <label class="delivery-block__label" for="floor">Этаж</label>
-                                        <input class="delivery-block__input" id="floor" type="text">
+                                        <input class="delivery-block__input" id="floor" type="text" name="floor" required>
                                     </div>
 
                                 </div>
@@ -618,7 +636,7 @@
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group delivery-block__label--margin">
                                         <label class="delivery-block__label" for="comments">Комментарий</label>
-                                        <textarea class="delivery-block__comments " name="text"
+                                        <textarea class="delivery-block__comments " name="comments"
                                             class="delivery-block__comments" id="comments"></textarea>
                                     </div>
                                 </div>
@@ -639,21 +657,22 @@
                                 <div class="delivery-block__checkbox-row">
                                     <div class="delivery-block__checkbox-group">
                                         <input class="delivery-block__checkbox-input" id="no-phone" type="checkbox"
-                                            name="phone">
+                                            name="tel">
                                         <label class="delivery-block__checkbox-label" for="no-phone" tabindex="0">Не
                                             презванивать</label>
                                     </div>
                                 </div>
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__radio-group">
-                                        <button type="submit" class="button">Заказать</button>
+                                        <button  class="button button--submit">Заказать</button>
                                     </div>
                                 </div>
                         </form>
                     </div>
                 </div>
             </section>
-            <section class="section map" id="map-link">
+            <section class="section" id="map-link">
+            <div id="map" class="mymap"></div>
                 <footer class="footer">
                     <div class="footer-wrapper">
                         <div class="contacts">
@@ -699,163 +718,176 @@
                 </footer>
 
             </section>
-            <div class="reviews-popup">
-                <div class="conteiner jc-centr">
-                    <div class="reviews-popup__wrapper">
-                        <h4 class="reviews__title reviews--black">Константин Спилберг</h4>
-                        <p class="reviews__desc reviews--black">Мысли все о них и о них, о них и о них. Нельзя устоять,
-                            невозможно забыть...
-                            Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
-                            расплавленным.</p>
-                        <button class="close-reviews">
-                            <span class="close-reviews__lines"></span>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-
-
-
         </main>
     </div>
+<script>
+    var link = document.querySelector(".burger-menu");
+var button = document.querySelector(".mobile-popup");
+var accordeon = document.querySelectorAll(".team__link");
+var accordeonOpen = document.getElementsByClassName(".team__dropdown");
+let reviewsPopup = document.querySelector(".reviews-popup")
+let buttonReviews = document.querySelectorAll(".button--reviews")
+let accordeonMenu = document.querySelectorAll(".accordeon__item")
+let accordeonDesc = document.querySelectorAll(".accordeon__desc")
+let accordeonList = document.querySelector(".accordeon__list")
+var submit = document.querySelector(".button--submit")
+var form = document.querySelector(".form")
+let accordeonActive = document.querySelectorAll(".accordeon--active")
 
-    <script>
-        var link = document.querySelector(".burger-menu");
-        var button = document.querySelector(".mobile-popup");
-        var accordeon = document.querySelectorAll("li.accordeon__item");
-        var accordeonOpen = document.querySelector(".accordeon__desc");
-        var closeReviews = document.querySelector(".close-reviews")
-        var reviewsPopup = document.querySelector(".reviews-popup")
-        var buttonReviews = document.querySelector(".button--reviews")
-        link.addEventListener("click", function (evt) {
-            link.classList.toggle("burger-menu__active");
-            console.log("Клик");
-        });
-        link.addEventListener("click", function (event) {
-            button.classList.toggle("mobile-popup-open");
-            console.log("Клик");
-        });
-        closeReviews.addEventListener("click", function (event2) {
-            reviewsPopup.classList.toggle("close-js");
-            console.log("closeReviews");
-        });
-        buttonReviews.addEventListener("click", function (event3) {
-            reviewsPopup.classList.toggle("open-js");
-            console.log(buttonReviews);
-        });
-
-
-
-
-
-
-
-        // accordeon.addEventListener("click",function(evnt){
-        // accordeonOpen.classList.toggle("accordeon-open") ;
-        // console.log ("Клик") ;}); 
-
-
-
-
-
-
-
-
-
-
-
-        // var name = 'Евгений';
-        // if (name == 'Дмитрий') {
-        //     console.log("Да");
-        // } else {
-        //     console.log('Нет')
-        // }
-        // for (
-        //     var i = 0;
-        //     i < 5;
-        //     i++
-        // ) {
-        //     console.log(i);
-        // }
-
-
-
-
-
-        // function sum(a, b) {
-        //     var result = a + b;
-        //     return result;
-        // }
-        // var q = sum(2, 3);
-        // {
-        //     console.log(q);
-        // }
-        // var w = 100;
-        // var e = 200;
-
-
-
-
-
-    </script>   
-<script type="text/javascript">
-        jQuery(document).ready(function($) {
-            
-        $('.burger__list').slick({
-            prevArrow: $('.burger__arrow-back '),
-            nextArrow: $('.burger__arrow-forward '),
-                slidesToShow: 1,
-                slidesToScroll: 1
-})
-            });
-            $('#fullpage').fullpage({
-    sectionSelector: '.section' 
     
-            });
+// Меню
 
-        $(".team__dropdown").hide().prev().click(function(){
-            $(".team__dropdown").not(this).slideUp();
-            $(this).next().not(":visible").slideDown();
-            });
-        // $(".accordeon__item").click(function(){
-        //     $(".accordeon__desc").toggle();
-        // })
-
-//         $(".accordeon__item").click(function() {
-//             $(".accordeon__desc").toggleClass("open-js")
-//             .siblings().removeClass('close-js');
-// })
-
-$(".accordeon__item").on("click", function() {
-    $this = $(event.target);
-    $('.accordeon__desc').addClass("open-js");
-    
-
+link.addEventListener("click", function () {
+    link.classList.toggle("burger-menu__active");
 });
-    
-</script>
 
-       
+link.addEventListener("click", function () {
+    button.classList.toggle("mobile-popup-open");
+});
+
+// Кнопка отзыв
+
+for( let i = 0; i < buttonReviews.length; i++) {
+    buttonReviews[i].onclick = function(){
+    reviewsPopup.classList.add('open-js')}}
             
+reviewsPopup.addEventListener('click' , function() {
+    reviewsPopup.classList.remove('open-js');
+    });
+    
+
+//  JS accordeon
+// for(var i = 0; i < accordeon.length; i++) {
+//     accordeon[i].addEventListener('click', function() {
+//             for(var i = 0; i < accordeon.length;i++){
+//                 accordeon[i].classList.remove('active') 
+//             }
+//             this.classList.toggle('active')
+//         }
+//     )
+// }
+// accordeon[0].classList.add('active')
+
+// Меню-аккордеон
+
+// Вариант-1
+
+// for(let i = 0; i < accordeonMenu.length; i++){
+//     accordeonMenu[i].addEventListener('click' , function(e) {
+//         e.preventDefault();
+//         for(let j = 0; j < accordeonDesc.length; j++){
+//         accordeonDesc[j].classList.remove('accordeon--active')
+//         }
+//         accordeonDesc[i].classList.toggle('accordeon--active')
+//         if (accordeonDesc[i].classList.contains('.accordeon--active')) {
+//             accordeonDesc[i].classList.remove('.accordeon--active'); 
+//     }})
+//     accordeonDesc[0].classList.add('accordeon--active')
+// }
  
+// Вариант-2
+
+for (let i = 0; i < accordeonMenu.length; i++) {
+    accordeonMenu[i].onclick = function(){ 
+      
+    if (this.classList.contains("accordeon--active")){
+        this.classList.remove("accordeon--active");
+    }else{
+        for(let a = 0; a < accordeonMenu.length; a++){
+        accordeonMenu[a].classList.remove("accordeon--active");
+      }
+      this.classList.add("accordeon--active");
+    }
     
+  };
+}
 
-            
+// Форма
 
-            
+submit.addEventListener('click' , event => {
+    event.preventDefault();
+    var formData = {
+        name: form.elements.name.value ,
+        phone: form.elements.phone.value ,
+        comments: form.elements.comments.value 
+    }
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = 'json'
+    xhr.open('POST' , 'https://webdev-api.loftschool.com/sendmail')
+    xhr.send(JSON.stringify(formData))
+    xhr.addEventListener('load',() => {
+    console.log(xhr.response) 
+    });
+})
 
-    </script>
-    
 
 
+// Jquery
 
+// Slick-slider
 
+jQuery(document).ready(function($) {    
+    $('.burger__list').slick({
+        prevArrow: $('.burger__arrow-back '),
+        nextArrow: $('.burger__arrow-forward '),
+            slidesToShow: 1,
+            slidesToScroll: 1
+        })
+        });
+        $('#fullpage').fullpage({
+sectionSelector: '.section' 
 
+        });
 
+// Jquery-аккордеоны
+
+// $(function(){
+// $('.accordeon__item').on('click', function(e){
+//     e.preventDefault();
+//         var $this = $(this),
+//         container = $this.closest('.accordeon__list'),
+//         item = $this.closest('.accordeon__item'),
+//         items = container.find('.accordeon__list'),
+//         activeItem = items.filter('.active'),
+//         content = item.find('.accordeon__desc'),
+//         activeContent = activeItem.find('.accordeon__desc');
+
+//         if (!item.hasClass('active')) {
+//             items.removeClass('active');
+//             item.addClass('active');
+//             activeContent.animate({
+//                    'width' : '0px'
+//             });    
+//             content.animate({
+//                    'width' : '100%'
+//             });
+
+//         } else {
+//             item.removeClass('active');
+//             content.animate({
+//                    'width' : '0px'
+//             });
+
+//         }
+// });
+// });
+
+    $(".team__dropdown").hide().prev().click(function(){
+        $(".team__dropdown").not(this).slideUp();
+        $(this).next().not(":visible").slideDown();
+        });
+
+// jQuery-Якоря
+
+$(function(){
+    $("a[href^='#']").click(function(){
+            var _href = $(this).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+            return false;
+    });
+});
+
+</script>
+<script type="text/javascript" src="./js/map.js"></script>    
 </body>
-
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="conteiner">
+
+    </div>
+
+ <script>
+var div = document.createElement("div")
+var conteiner = document.querySelector("#conteiner")
+var div2 = document.createElement("div")
+var link = document.createElement("a")
+var href = document.createAttribute("href")
+var input = document.createElement("input")
+var button = document.createElement("button")
+conteiner.appendChild(div)
+div.textContent = 'Этот элемент создан при помощи DOM API' ;
+div2.className = "inner"
+div.appendChild(div2)
+div2.textContent = 'Этот элемент тоже создан при помощи DOM API'
+div2.style.color = 'red'
+div.addEventListener ("click" , function() {
+    console.log ("Этот текст говорит о том, что я всё сделал правильно")
+})
+conteiner.appendChild(link)
+conteiner.appendChild(input)
+conteiner.appendChild(button)
+link.setAttribute("href", "https://loftschool.com")
+link.style.display = "block"
+link.addEventListener ("click" , function(e) {
+    e.preventDefault()
+    console.log ("Я кликнул на ссылку https://loftschool.com")
+})
+link.textContent = "Сcылка"
+button.textContent = "Кнопка"
+button.style.marginLeft = "15px"
+button.addEventListener ("click" , function(e) {
+    e.preventDefault()
+    console.log (input.value)
+})
+input.className = "input"
+input.setAttribute("name" , "Евгений")
+
+
+
+
+
+
+</script>   
+</body>
+</html>

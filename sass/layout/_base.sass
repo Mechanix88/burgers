@@ -5,11 +5,11 @@
 html, body 
     height: 100%
     width: 100%
-    font-size: 16px
+    font-size: 1rem
     @media screen and (max-width: 768px)
-        font-size: 15px
+        font-size: 0.9375rem
     @media screen and (max-width: 480px)
-        font-size: 14px
+        font-size: 0.875rem
 
 
 img
@@ -28,7 +28,7 @@ a
 .section 
     height: 100vh
     width: 100%
-    min-height: 650px
+    min-height: 40.625rem
 
 .conteiner 
     max-width: 60rem
@@ -85,7 +85,6 @@ a
     display: flex
 
 .map
-    background-image:url(./../img/bg/map.jpg)
     background-repeat: no-repeat
     background-size: cover
     display: flex
@@ -125,25 +124,32 @@ a
     text-align: center
     cursor: pointer
     transition: 1s
-    padding: 11px 15px 11px 15px
+    padding: 0.6875rem 0.9375rem 0.6875rem 0.9375rem
     line-height: 13px
     &:hover
         background-color: #c1401e
 
 .header-btn
     @media screen and (max-width: 920px)
-        margin-right: 60px
+        margin-right: 3.75rem
     
 
 
 #fullpage 
   height: 100vh
+
+.jc-centr
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
  
 
 .open-js
     display: block
-    width: 300px !important
     
+.active
+    height: 100%    
 
 .close-js
     display: none
