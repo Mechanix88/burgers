@@ -593,41 +593,44 @@
                 <div class="conteiner">
                     <div class="delivery-wrapper">
                         <h2 class="title title--center">Закажите доставку</h2>
-                        <form class="form">
+                        <form action="" class="form">
                             <div class="delivery-block">
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group">
-                                        <label class="delivery-block__label" for="name">Имя</label>
+                                        <label class="delivery-block__label" for="name" >Имя</label>
                                         <input class="delivery-block__input" id="name" type="text" name="name" required>
+                                        <span class="error"></span>
                                     </div>
                                     <div class="delivery-block__group margin">
                                         <label class="delivery-block__label " for="phone">Телефон</label>
                                         <input class="delivery-block__input" id="phone" type="text"
                                             placeholder="89212264923" name="phone" required>
+                                            <span class="error"></span>
                                     </div>
                                 </div>
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group margin">
                                         <label class="delivery-block__label" for="street">Улица</label>
                                         <input class="delivery-block__input" id="street" type="text" name="street" required>
+                                        <span class="error"></span>
                                     </div>
                                 </div>
                                 <div class="delivery-block__row">
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="home">Дом</label>
-                                        <input class="delivery-block__input" id="home" type="text" name="home" required>
+                                        <input class="delivery-block__input" id="home" type="text" name="home" >
                                     </div>
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="housing">Корпус</label>
-                                        <input class="delivery-block__input" id="housing" type="text" name="housing" required>
+                                        <input class="delivery-block__input" id="housing" type="text" name="housing" >
                                     </div>
                                     <div class="delivery-block__group">
                                         <label class="delivery-block__label" for="apartment">Квартира</label>
-                                        <input class="delivery-block__input" id="apartment" type="text" name="apartment" required>
+                                        <input class="delivery-block__input" id="apartment" type="text" name="apartment" >
                                     </div>
                                     <div class="delivery-block__group margin">
                                         <label class="delivery-block__label" for="floor">Этаж</label>
-                                        <input class="delivery-block__input" id="floor" type="text" name="floor" required>
+                                        <input class="delivery-block__input" id="floor" type="text" name="floor" >
                                     </div>
 
                                 </div>
@@ -637,7 +640,8 @@
                                     <div class="delivery-block__group delivery-block__label--margin">
                                         <label class="delivery-block__label" for="comments">Комментарий</label>
                                         <textarea class="delivery-block__comments " name="comments"
-                                            class="delivery-block__comments" id="comments"></textarea>
+                                            class="delivery-block__comments" id="comments" required></textarea>
+                                            <span class="error"></span>
                                     </div>
                                 </div>
                                 <div class="delivery-block__radio-row">
@@ -668,6 +672,10 @@
                                     </div>
                                 </div>
                         </form>
+                        <div class="delivery__modal">
+                            <div class="delivery__modal-text"></div>
+                            <button class="delivery__button" type="button">Закрыть</button>
+                          </div>
                     </div>
                 </div>
             </section>
@@ -732,6 +740,9 @@ let accordeonDesc = document.querySelectorAll(".accordeon__desc")
 let accordeonList = document.querySelector(".accordeon__list")
 var submit = document.querySelector(".button--submit")
 var form = document.querySelector(".form")
+var modal = document.querySelector('.delivery__modal');
+var modalMsg = modal.querySelector('.delivery__modal-text')
+var modalClose = modal.querySelector('.delivery__button');
 let accordeonActive = document.querySelectorAll(".accordeon--active")
 
     
@@ -802,25 +813,70 @@ for (let i = 0; i < accordeonMenu.length; i++) {
   };
 }
 
+
 // Форма
 
-submit.addEventListener('click' , event => {
-    event.preventDefault();
-    var formData = {
-        name: form.elements.name.value ,
-        phone: form.elements.phone.value ,
-        comments: form.elements.comments.value 
+function validate(form) {
+    let valid = true;
+    if (!validateField(form.elements.name)) {
+      valid = false;
     }
-    var xhr = new XMLHttpRequest();
-    xhr.responseType = 'json'
-    xhr.open('POST' , 'https://webdev-api.loftschool.com/sendmail')
-    xhr.send(JSON.stringify(formData))
-    xhr.addEventListener('load',() => {
-    console.log(xhr.response) 
-    });
-})
+    if (!validateField(form.elements.phone)) {
+      valid = false;
+    }
+    if (!validateField(form.elements.comments)) {
+      valid = false;
+    }
+    return valid;
+  }
+  function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+  }
 
+  function exchange(e) {
+    e.preventDefault();
+    let url = 'https://webdev-api.loftschool.com/sendmail';
+    let urlFail = 'https://webdev-api.loftschool.com/sendmail/fail';
+    try {
 
+      if (!validate(form)) {
+        throw new Error('Заполните форму');
+      }
+      var fData = new FormData();
+      fData.append('name', form.elements.name.value);
+      fData.append('phone', form.elements.phone.value);
+      fData.append('comment', form.elements.comments.value);
+      fData.append('to', 'mechanix96@mail.ru');
+
+      var xhr = new XMLHttpRequest();
+      xhr.responseType = 'json';
+      xhr.open('POST', url);
+      xhr.send(fData);
+      xhr.addEventListener('load', function () {
+        if (xhr.status >= 400) {
+          console.log(xhr.response.message);
+          modal.style.display = 'flex';
+          modalMsg.textContent = xhr.response.message;
+
+        } else {
+          console.log(xhr.response.message);
+          modal.style.display = 'flex';
+          modalMsg.textContent = xhr.response.message;
+          form.reset();
+        }
+      })
+    } catch (e) {
+      alert(e.message);
+    }
+  };
+
+  submit.addEventListener('click', exchange);
+  modalClose.addEventListener('click', function (e) {
+    e.preventDefault();
+    modal.style.display = 'none';
+    overlay.classList.remove('overlay');
+  });
 
 // Jquery
 
