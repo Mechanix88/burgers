@@ -16,7 +16,7 @@ var myMap ,
 
 
     myPlacemark1 = new ymaps.Placemark([59.9724, 30.3094], {
-    balloonContent: 'sadas'
+    balloonContent: 'Тут должен быть адрес'
     
     
     },
@@ -27,8 +27,7 @@ var myMap ,
     });
 
     myPlacemark2 = new ymaps.Placemark([59.9433, 30.3764], {
-        hintContent: 'uu' ,
-        balloonContent: '333'
+        balloonContent: 'Тут должен быть адрес'
         
         },
         {
@@ -39,8 +38,7 @@ var myMap ,
     
     
     myPlacemark3 = new ymaps.Placemark([59.9230, 30.4809], {
-            hintContent: '' ,
-            balloonContent: ''
+        balloonContent: 'Тут должен быть адрес'
             
             },
             {
@@ -50,8 +48,7 @@ var myMap ,
             });
     
     myPlacemark4 = new ymaps.Placemark([59.8999, 30.3197], {
-                hintContent: 'uu' ,
-                balloonContent: '333'
+        balloonContent: 'Тут должен быть адрес'
                 
                 },
                 {
