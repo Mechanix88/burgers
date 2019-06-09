@@ -4,16 +4,23 @@
   "description": "loftschool-project-burgers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "author": "Pavlov Evgeniy",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^6.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-inject": "^5.0.2",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-normalize-scss": "^8.0.0"
   },
   "dependencies": {
     "gulp-concat-css": "^3.1.0",
