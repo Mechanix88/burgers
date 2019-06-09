@@ -1,0 +1,108 @@
+
+.hamburger-header 
+    display: flex
+
+.burger-menu
+    z-index: 99
+    
+
+.burger-menu__button
+    position: fixed
+    top: 2.375rem
+    right: 3%
+    background-color: #ffffff
+    border: 0
+    display: none
+    width: 1.5rem
+    height: 1.5rem
+    background: transparent
+    z-index: 99
+    
+    
+    @media screen and (max-width: 920px)
+        cursor: pointer
+        display: block
+
+.burger-menu__lines,
+.burger-menu__lines::after,
+.burger-menu__lines::before
+    position: absolute
+    width: 100%
+    height: 0.25rem
+    background-color: #fff
+    border-radius: 0.1875rem
+    transition: 0.5s
+
+.burger-menu__lines
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    
+
+.burger-menu__lines::after
+    content: ""
+    top: -0.5625rem
+    left: 0
+
+.burger-menu__lines::before
+    content: ""
+    top: 0.5625rem
+    left: 0
+
+.burger-menu__active .burger-menu__lines
+    background: transparent
+    
+
+.burger-menu__active .burger-menu__lines::after
+    top: 0
+    transform: rotate(45deg)
+
+.burger-menu__active .burger-menu__lines::before
+    top: 0
+    transform: rotate(-45deg)
+    
+.close-reviews
+    position: absolute
+    top: 0.625rem
+    right: 0.625rem
+    background-color: #ffffff
+    border: 0
+    display: block
+    width: 0.9375rem
+    height: 0.9375rem
+    
+    
+
+
+.close-reviews__lines,
+.close-reviews__lines::after,
+.close-reviews__lines::before
+    position: absolute
+    width: 100%
+    height: 0.1875rem
+    background-color: #fff
+    border-radius: 0.1875rem
+    transition: 0.5s
+    top: 34%
+    right: 0%
+    background-color: #ec8569
+    
+
+.close-reviews__lines
+    background: transparent
+
+.close-reviews__lines::after
+    content: ""
+    transform: rotate(45deg)
+
+.close-reviews__lines::before
+    content: ""
+    transform: rotate(-45deg)
+
+
+
+.open-js
+    display: block 
+.close-js
+    display: none
+     

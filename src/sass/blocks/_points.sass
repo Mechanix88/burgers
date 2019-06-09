@@ -1,0 +1,61 @@
+.points
+    right: 5vw
+    top: 14vh
+    z-index: 10
+    position: fixed
+    @media screen and (max-width: 900px)
+        display: none
+        overflow: hidden
+    
+.points__list
+    list-style: none
+    padding: 0
+    margin: 0
+    height: 11.625rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.points__item
+    position: relative
+    height: 1rem
+    width: 1rem
+    z-index: 10
+    cursor: pointer
+.points__link
+    width: 0.375rem
+    height: 0.375rem
+    background-color:#fff
+    position: absolute
+    border-radius: 50%
+    z-index: 10
+    left: 50%
+    top: 50%
+    display: block
+    transform: translate(-50%,-50%)
+
+    
+            
+.points__link:hover:before
+    content: ""
+    opacity: 1 
+
+.points__active:before
+        content: ""
+        width: 1rem
+        height: 1rem
+        border: 1px solid #ffffff
+        position: absolute
+        border-radius: 50%
+        z-index: 10
+        left: 50%
+        top: 50%
+        display: block
+        transform: translate(-50%,-50%)
+        opacity: 1
+        transition: 1s
+
+
+.points__list.blackBullets.points__item.points__link::before
+    color: black
+    background-color: black
