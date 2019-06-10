@@ -21,6 +21,7 @@ var duration = document.querySelector('.progress-bar-circle')
 var muted = document.querySelector('.muted-button')
 var videoPlay = document.querySelector('.work__video-play')
 
+console.log("reviewsPopup")
 
 // OnePage
 let currentEq = 0,
@@ -140,7 +141,7 @@ document.querySelector('.header-btn').addEventListener('click', (event) => {
 
 
 // video
-console.log(videoEl)
+// console.log(videoEl)
 videoEl.addEventListener('canplaythrough', function () {
             vidControls.classList.remove('hidden');
             videoEl.volume = volumeControl.value;
@@ -243,6 +244,8 @@ for( let i = 0; i < buttonReviews.length; i++) {
 reviewsPopup.addEventListener('click' , function() {
     reviewsPopup.classList.remove('open-js');
     });
+
+    
     
 
 //  JS accordeon
