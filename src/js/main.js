@@ -35,7 +35,7 @@ const pageContent = document.querySelector('.main'),
 function onePageScroll(eq) {
   function translate() {
     inScroll = true;
-    const position = `-${eq * 100}vh`;
+    const position = `-${eq * 100}%`;
     pageContent.style.transform = `translateY(${position})`;
     pageContent.style.webkitTransform = `translateY(${position})`;  
     setCurrentBullet(eq);
@@ -127,6 +127,14 @@ mainMenuItems.forEach((elem) => {
   });
 });
 
+const mobileMenuItems = document.querySelectorAll('.mobile-nav__link');
+mobileMenuItems.forEach((elem) => {
+  elem.addEventListener('click', (event) => {
+    event.preventDefault();
+    onePageScroll(+elem.dataset.scrollTo);
+  });
+});
+
 document.querySelector('.first-block__arrow-down').addEventListener('click', (event) => {
   event.preventDefault();
   onePageScroll(1);
@@ -154,11 +162,13 @@ videoEl.addEventListener('click', function () {
                 videoEl.play();
                 startDuration = setInterval(initDuration,1000/66)
                 videoPlay.classList.remove('video-show')
+                playBtn.style.backgroundImage = "url(./img/icons/Pause_gray.png)"
             } 
             else {
                 videoEl.pause();
                 clearInterval(startDuration)
                 videoPlay.classList.add('video-show')
+                playBtn.style.backgroundImage = null
 
             }
         }, false);
@@ -170,10 +180,13 @@ videoPlay.addEventListener('click', function () {
             if (videoEl.paused) {
                 videoEl.play();
                 startDuration = setInterval(initDuration,1000/66)
+                playBtn.style.backgroundImage = "url(./img/icons/Pause_gray.png)"
             } 
             else {
                 videoEl.pause();
                 clearInterval(startDuration)
+                playBtn.style.backgroundImage = null
+                
 
             }
         }, false);
@@ -185,10 +198,12 @@ playBtn.addEventListener('click', function () {
                 videoEl.play();
                 startDuration = setInterval(initDuration,1000/66)
                 videoPlay.classList.remove('video-show')
+                playBtn.style.backgroundImage = "url(./img/icons/Pause_gray.png)"
             } 
             else {
                 videoEl.pause();
                 videoPlay.classList.add('video-show')
+                playBtn.style.backgroundImage = null
                 clearInterval(startDuration)
             }
         }, false);
