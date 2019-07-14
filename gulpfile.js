@@ -8,7 +8,7 @@ var gulp        = require('gulp'),
 
 gulp.task('sass', function(){ 
     return gulp.src('src/sass/**/*.{sass,scss}') 
-        .pipe(concat('main.sass'))
+        // .pipe(concat('main.sass'))
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(gulp.dest('src/css')) 
 });
@@ -21,11 +21,13 @@ gulp.task('autoprefixer', gulp.parallel('watch'))
 
 gulp.task('default', function () {
 return gulp.src('src/css/main.css')
+
+.pipe(concat('main.css'))
 .pipe( autoprefixer({
-browsers: ['last 4 versions'],
+overrideBrowserslist: ['last 2 versions'],
 cascade: false
 }))
-.pipe( gulp.dest('dist') );
+.pipe( gulp.dest('src/css/') );
 
 });
 
@@ -63,5 +65,5 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest('./dist/'));
   });
 
-// gulp.task("default" , gulp.series("clean" , "copy"))
+gulp.task("prod" , gulp.series("clean" , "copy"))
 
