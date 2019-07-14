@@ -1,0 +1,221 @@
+.reviews__wrapper
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+    margin: 0
+    list-style: none
+    width: 100%
+    height: 100%
+    
+
+.reviews__item
+    overflow: hidden
+    flex: 25%
+    width: 100%
+    filter: grayscale(100%)
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+   
+
+.reviews--img-1
+    background: url("./../img/bg/reviews-1.jpg") 
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh 
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+    
+
+
+.reviews--img-2
+    background: url("./../img/bg/reviews-2.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: -100px
+    transition: 1s
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+        background-position: 0px
+    
+
+.reviews--img-3
+    background: url("./../img/bg/reviews-3.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+    
+
+.reviews--img-4
+    background: url("./../img/bg/reviews-8.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+   
+
+.reviews--img-5
+    background: url("./../img/bg/reviews-4.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+    
+
+.reviews--img-6
+    background: url("./../img/bg/reviews-5.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+    
+
+.reviews--img-7
+    background: url("./../img/bg/reviews-6.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+    
+
+.reviews--img-8
+    background: url("./../img/bg/reviews-7.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 50vh
+    width: 25vw
+    background-position: center
+    @media screen and (max-width: 768px)
+        flex-direction: column
+        flex: 50%
+        height: 25%
+    
+
+.reviews__title
+    color: #ffffff
+    font-family: Gagalin
+    font-size: 0.875rem
+    font-weight: 400
+    line-height: 1.7569rem
+    @media screen and (max-width: 768px)
+        margin-bottom: 0px
+    @media screen and (max-width: 480px)
+        margin-bottom: 1.25rem
+        text-align: center
+        font-size: 1.5rem
+       
+.reviews__desc
+    color: #ffffff
+    font-family: Ubuntu
+    font-size: 0.875rem
+    font-weight: 300
+    line-height: 1.5rem
+    @media screen and (max-width: 480px)
+        display: none
+        overflow: hidden
+
+
+.reviews__block
+    padding-left: 1.25rem
+    padding-top: 3.125rem
+    padding-right: 2.0625rem
+    height: 100%
+    width: 100%
+    background-color: rgba(20, 20, 20, 0.7)
+    opacity: 0
+    transition: 1s
+    cursor: pointer
+    &:hover
+        opacity: 1
+    @media screen and (max-width: 768px)
+        padding-top: 0.625rem
+        padding-left: 0.625rem
+        padding-right: 0.625rem
+        text-align: center
+    @media screen and (max-width: 480px)
+        padding-top: 0.625rem
+        padding-left: 1.25rem
+        padding-right: 1.25rem
+        text-align: center
+
+.button--reviews
+    background-color: #2f3234
+    transition: 1s
+    @media screen and (max-width: 480px)
+        margin: 0 auto
+        display: block
+    &:hover 
+        background-color: #1f2122
+
+
+.reviews-popup
+    position: fixed
+    background-color: #2f3234
+    opacity: 0.92
+    left: 0
+    bottom: 0
+    height: 100vh
+    width: 100%
+    display: flex
+    justify-content: center
+    display: none
+    z-index: 99
+    
+
+.reviews-popup__wrapper
+    display: flex
+    flex-direction: column
+    max-width: 31.25rem
+    justify-content: center
+    background-color: #ffffff
+    color: #2f3234
+    padding-left: 1.25rem
+    padding-right: 1.875rem
+    border-radius: 0.3125rem
+    position: relative
+    height: fit-content
+
+.open-js
+    display: block
+
+.reviews--black
+    color: #2f3234
+
+
+
+
+
